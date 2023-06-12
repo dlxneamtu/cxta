@@ -1,0 +1,20 @@
+
+2023-05-26 22:04:47,644: %UNICON-INFO: +++ npe-1 logfile /home/cisco/cxta/device_logs/npe-1-20230526T220447628.log +++
+
+2023-05-26 22:04:47,645: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-26 22:04:47,651: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-26 22:04:47,664: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140608615330144 +++
+
+2023-05-26 22:04:47,666: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Fri May 26 22:04:45 2023 from 10.209.205.222
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-26 22:04:48,939: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-26 22:04:48,944: %UNICON-INFO: connection to npe-1
+ssh -l cisco 17.3.11.61
+]133;C;Password: 

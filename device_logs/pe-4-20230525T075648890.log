@@ -1,0 +1,62 @@
+
+2023-05-25 07:56:48,901: %UNICON-INFO: +++ pe-4 logfile /home/cisco/cxta/device_logs/pe-4-20230525T075648890.log +++
+
+2023-05-25 07:56:48,903: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-25 07:56:48,907: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-25 07:56:48,923: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140637305087072 +++
+
+2023-05-25 07:56:48,925: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Thu May 25 07:56:46 2023 from 10.209.205.222
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-25 07:56:49,904: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-25 07:56:49,910: %UNICON-INFO: connection to pe-4
+ssh -l cisco 17.3.11.74
+]133;C;The authenticity of host '17.3.11.74 (17.3.11.74)' can't be established.
+ECDSA key fingerprint is SHA256:5E2kmfQZ+ArOCZEPZd+TKda7fhQC0nIyWw7Y0InonHA.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '17.3.11.74' (ECDSA) to the list of known hosts.
+Password: 
+Last login: Thu May 25 07:45:20 2023 from 17.3.11.162
+
+
+
+RP/0/RP0/CPU0:pe-4#
+
+2023-05-25 07:56:50,636: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-25 07:56:50,965: %UNICON-INFO: +++ pe-4 with via 'cli': executing command 'term length 0' +++
+term length 0
+Thu May 25 07:54:52.321 UTC
+RP/0/RP0/CPU0:pe-4#
+
+2023-05-25 07:56:51,546: %UNICON-INFO: +++ pe-4 with via 'cli': executing command 'term width 0' +++
+term width 0
+Thu May 25 07:54:52.898 UTC
+RP/0/RP0/CPU0:pe-4#
+
+2023-05-25 07:56:52,122: %UNICON-INFO: +++ pe-4 with via 'cli': executing command 'show version' +++
+show version
+Thu May 25 07:54:53.476 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+pe-4 uptime is 1 week, 4 days, 11 hours, 7 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:pe-4#

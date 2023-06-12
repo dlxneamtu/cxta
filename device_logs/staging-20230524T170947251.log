@@ -1,0 +1,202 @@
+
+2023-05-24 17:09:47,256: %UNICON-INFO: +++ staging logfile /home/cisco/cxta/device_logs/staging-20230524T170947251.log +++
+
+2023-05-24 17:09:47,257: %UNICON-INFO: +++ Unicon plugin linux (unicon.plugins.linux) +++
+
+2023-05-24 17:09:47,268: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163 -p 22, id: 140024898475152 +++
+
+2023-05-24 17:09:47,270: %UNICON-INFO: connection to staging
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Wed May 24 17:07:54 2023 from 10.209.221.184
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-24 17:09:48,234: %UNICON-INFO: Learned hostname: smi-deployer
+
+]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-24 17:09:48,329: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-24 17:09:49,178: %UNICON-INFO: +++ smi-deployer with via 'cli': executing command 'ls /' +++
+ls /
+]133;C;bin  boot  data  dev  etc  home  initrd.img  initrd.img.old  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var  vmlinuz  vmlinuz.old
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-24 17:09:49,460: %UNICON-INFO: smi-deployer is already connected
+
+2023-05-24 17:09:49,867: %UNICON-INFO: +++ smi-deployer with via 'cli': executing command 'ps -ef' +++
+ps -ef
+]133;C;UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 Feb06 ?        00:00:37 /sbin/init
+root         2     0  0 Feb06 ?        00:00:00 [kthreadd]
+root         3     2  0 Feb06 ?        00:00:00 [rcu_gp]
+root         4     2  0 Feb06 ?        00:00:00 [rcu_par_gp]
+root         6     2  0 Feb06 ?        00:00:00 [kworker/0:0H-kb]
+root         8     2  0 Feb06 ?        00:00:00 [mm_percpu_wq]
+root         9     2  0 Feb06 ?        00:00:05 [ksoftirqd/0]
+root        10     2  0 Feb06 ?        00:01:28 [rcu_sched]
+root        11     2  0 Feb06 ?        00:00:13 [migration/0]
+root        12     2  0 Feb06 ?        00:00:00 [idle_inject/0]
+root        14     2  0 Feb06 ?        00:00:00 [cpuhp/0]
+root        15     2  0 Feb06 ?        00:00:00 [cpuhp/1]
+root        16     2  0 Feb06 ?        00:00:00 [idle_inject/1]
+root        17     2  0 Feb06 ?        00:00:11 [migration/1]
+root        18     2  0 Feb06 ?        00:00:06 [ksoftirqd/1]
+root        20     2  0 Feb06 ?        00:00:00 [kworker/1:0H-kb]
+root        21     2  0 Feb06 ?        00:00:00 [kdevtmpfs]
+root        22     2  0 Feb06 ?        00:00:00 [netns]
+root        23     2  0 Feb06 ?        00:00:00 [rcu_tasks_kthre]
+root        24     2  0 Feb06 ?        00:00:00 [kauditd]
+root        26     2  0 Feb06 ?        00:00:05 [khungtaskd]
+root        27     2  0 Feb06 ?        00:00:00 [oom_reaper]
+root        28     2  0 Feb06 ?        00:00:00 [writeback]
+root        29     2  0 Feb06 ?        00:00:00 [kcompactd0]
+root        30     2  0 Feb06 ?        00:00:00 [ksmd]
+root        31     2  0 Feb06 ?        00:00:01 [khugepaged]
+root        32     2  0 Feb06 ?        00:00:00 [crypto]
+root        33     2  0 Feb06 ?        00:00:00 [kintegrityd]
+root        34     2  0 Feb06 ?        00:00:00 [kblockd]
+root        35     2  0 Feb06 ?        00:00:00 [tpm_dev_wq]
+root        36     2  0 Feb06 ?        00:00:00 [ata_sff]
+root        37     2  0 Feb06 ?        00:00:00 [md]
+root        38     2  0 Feb06 ?        00:00:00 [edac-poller]
+root        39     2  0 Feb06 ?        00:00:00 [devfreq_wq]
+root        40     2  0 Feb06 ?        00:00:00 [watchdogd]
+root        44     2  0 Feb06 ?        00:00:00 [kswapd0]
+root        45     2  0 Feb06 ?        00:00:00 [kworker/u5:0]
+root        46     2  0 Feb06 ?        00:00:00 [ecryptfs-kthrea]
+root       135     2  0 Feb06 ?        00:00:00 [kthrotld]
+root       136     2  0 Feb06 ?        00:00:00 [irq/24-pciehp]
+root       137     2  0 Feb06 ?        00:00:00 [irq/25-pciehp]
+root       138     2  0 Feb06 ?        00:00:00 [irq/26-pciehp]
+root       139     2  0 Feb06 ?        00:00:00 [irq/27-pciehp]
+root       140     2  0 Feb06 ?        00:00:00 [irq/28-pciehp]
+root       141     2  0 Feb06 ?        00:00:00 [irq/29-pciehp]
+root       142     2  0 Feb06 ?        00:00:00 [irq/30-pciehp]
+root       143     2  0 Feb06 ?        00:00:00 [irq/31-pciehp]
+root       144     2  0 Feb06 ?        00:00:00 [irq/32-pciehp]
+root       145     2  0 Feb06 ?        00:00:00 [irq/33-pciehp]
+root       146     2  0 Feb06 ?        00:00:00 [irq/34-pciehp]
+root       147     2  0 Feb06 ?        00:00:00 [irq/35-pciehp]
+root       148     2  0 Feb06 ?        00:00:00 [irq/36-pciehp]
+root       149     2  0 Feb06 ?        00:00:00 [irq/37-pciehp]
+root       150     2  0 Feb06 ?        00:00:00 [irq/38-pciehp]
+root       151     2  0 Feb06 ?        00:00:00 [irq/39-pciehp]
+root       152     2  0 Feb06 ?        00:00:00 [irq/40-pciehp]
+root       153     2  0 Feb06 ?        00:00:00 [irq/41-pciehp]
+root       154     2  0 Feb06 ?        00:00:00 [irq/42-pciehp]
+root       155     2  0 Feb06 ?        00:00:00 [irq/43-pciehp]
+root       156     2  0 Feb06 ?        00:00:00 [irq/44-pciehp]
+root       157     2  0 Feb06 ?        00:00:00 [irq/45-pciehp]
+root       158     2  0 Feb06 ?        00:00:00 [irq/46-pciehp]
+root       159     2  0 Feb06 ?        00:00:00 [irq/47-pciehp]
+root       160     2  0 Feb06 ?        00:00:00 [irq/48-pciehp]
+root       161     2  0 Feb06 ?        00:00:00 [irq/49-pciehp]
+root       162     2  0 Feb06 ?        00:00:00 [irq/50-pciehp]
+root       163     2  0 Feb06 ?        00:00:00 [irq/51-pciehp]
+root       164     2  0 Feb06 ?        00:00:00 [irq/52-pciehp]
+root       165     2  0 Feb06 ?        00:00:00 [irq/53-pciehp]
+root       166     2  0 Feb06 ?        00:00:00 [irq/54-pciehp]
+root       167     2  0 Feb06 ?        00:00:00 [irq/55-pciehp]
+root       168     2  0 Feb06 ?        00:00:00 [acpi_thermal_pm]
+root       169     2  0 Feb06 ?        00:00:00 [scsi_eh_0]
+root       170     2  0 Feb06 ?        00:00:00 [scsi_tmf_0]
+root       171     2  0 Feb06 ?        00:00:00 [scsi_eh_1]
+root       172     2  0 Feb06 ?        00:00:00 [scsi_tmf_1]
+root       175     2  0 Feb06 ?        00:00:00 [ipv6_addrconf]
+root       186     2  0 Feb06 ?        00:00:00 [kstrp]
+root       205     2  0 Feb06 ?        00:00:00 [charger_manager]
+root       206     2  0 Feb06 ?        00:00:09 [kworker/0:1H-kb]
+root       256     2  0 Feb06 ?        00:00:00 [mpt_poll_0]
+root       257     2  0 Feb06 ?        00:00:00 [mpt/0]
+root       275     2  0 Feb06 ?        00:00:15 [kworker/1:1H-kb]
+root       306     2  0 Feb06 ?        00:00:00 [scsi_eh_2]
+root       307     2  0 Feb06 ?        00:00:00 [scsi_tmf_2]
+root       391     2  0 Feb06 ?        00:00:00 [raid5wq]
+root       442     2  0 Feb06 ?        00:00:03 [jbd2/sda1-8]
+root       443     2  0 Feb06 ?        00:00:00 [ext4-rsv-conver]
+root       512     1  0 Feb06 ?        00:00:17 /lib/systemd/systemd-journald
+root       515     2  0 Feb06 ?        00:00:00 [iscsi_eh]
+root       524     2  0 Feb06 ?        00:00:00 [ib-comp-wq]
+root       525     2  0 Feb06 ?        00:00:00 [ib-comp-unb-wq]
+root       526     2  0 Feb06 ?        00:00:00 [ib_mcast]
+root       527     2  0 Feb06 ?        00:00:00 [ib_nl_sa_wq]
+root       529     2  0 Feb06 ?        00:00:00 [rdma_cm]
+root       533     1  0 Feb06 ?        00:00:00 /sbin/lvmetad -f
+root       536     1  0 Feb06 ?        00:00:10 /lib/systemd/systemd-udevd
+root       653     2  0 Feb06 ?        00:00:00 [jbd2/sdb1-8]
+root       654     2  0 Feb06 ?        00:00:00 [ext4-rsv-conver]
+systemd+   716     1  0 Feb06 ?        00:00:10 /lib/systemd/systemd-networkd
+root       747     1  0 Feb06 ?        00:00:00 /usr/bin/VGAuthService
+systemd+   801     1  0 Feb06 ?        00:00:10 /lib/systemd/systemd-resolved
+root       844     1  0 Feb06 ?        01:02:44 /usr/bin/vmtoolsd
+root       845     1  0 Feb06 ?        00:09:21 /usr/sbin/irqbalance --foreground
+root       858     1  0 Feb06 ?        00:00:11 /usr/sbin/cron -f
+root       859     1  0 Feb06 ?        00:00:26 /usr/bin/lxcfs /var/lib/lxcfs/
+root       866     1  0 Feb06 ?        00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+daemon     884     1  0 Feb06 ?        00:00:00 /usr/sbin/atd -f
+root       888     1  0 Feb06 ?        00:01:34 /usr/lib/accountsservice/accounts-daemon
+root       895     1  0 Feb06 ?        00:00:09 /lib/systemd/systemd-logind
+message+   900     1  0 Feb06 ?        00:00:02 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root      1006     1  0 Feb06 ?        00:00:00 /usr/lib/policykit-1/polkitd --no-debug
+_chrony   1029     1  0 Feb06 ?        00:00:03 /usr/sbin/chronyd
+root      1109     1  0 Feb06 ?        03:02:46 /usr/bin/dockerd -H fd://
+root      1125     1  0 Feb06 ttyS0    00:00:00 /sbin/agetty -o -p -- \u --keep-baud 115200,38400,9600 ttyS0 vt220
+root      1135     1  0 Feb06 tty1     00:00:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root      1185     1  0 Feb06 ?        00:00:00 /usr/sbin/sshd -D
+root      1235  1109  0 Feb06 ?        02:38:07 docker-containerd --config /var/run/docker/containerd/containerd.toml
+root      1313     2  0 Feb06 ?        00:00:00 bpfilter_umh
+root      2957     2  0 May21 ?        00:00:20 [kworker/0:2-eve]
+root      3049     2  0 May22 ?        00:00:11 [kworker/1:2-eve]
+root      3896  1235  0 Feb13 ?        00:03:58 docker-containerd-shim -namespace moby -workdir /var/lib/docker/containerd/daemon/io.containerd.runtime.v1.linux/moby/7964439ebd8bf3a5ce4db2d699834da79a
+root      3922  3896  0 Feb13 pts/0    00:00:00 /bin/sh
+root      4062     2  0 14:59 ?        00:00:00 [kworker/u4:2-ev]
+root      4067     2  0 15:39 ?        00:00:00 [kworker/u4:0-ev]
+root      4069  1185  0 16:05 ?        00:00:00 sshd: cloud-user [priv]
+cloud-u+  4071     1  0 16:05 ?        00:00:00 /lib/systemd/systemd --user
+cloud-u+  4072  4071  0 16:05 ?        00:00:00 (sd-pam)
+cloud-u+  4084  4069  0 16:05 ?        00:00:00 sshd: cloud-user@pts/0
+cloud-u+  4085  4084  0 16:05 pts/0    00:00:00 -bash
+root      4155  4085  0 16:05 pts/0    00:00:00 sudo docker pull dockerhub.cisco.com/cxta-docker/cxta:latest
+root      4156  4155  0 16:05 pts/0    00:00:00 docker pull dockerhub.cisco.com/cxta-docker/cxta:latest
+root      4174     2  0 16:47 ?        00:00:00 [kworker/0:0-cgr]
+root      4284     2  0 17:02 ?        00:00:00 [kworker/1:1-cgr]
+root      4285     2  0 17:03 ?        00:00:00 [kworker/u4:1-ev]
+root      4339     2  0 17:05 ?        00:00:00 [kworker/0:1]
+root      4340     2  0 17:05 ?        00:00:00 [kworker/u4:3]
+root      4435     2  0 17:07 ?        00:00:00 [kworker/1:0-eve]
+root      4496  1185  0 17:09 ?        00:00:00 sshd: cloud-user [priv]
+cloud-u+  4500  4496  0 17:09 ?        00:00:00 sshd: cloud-user@pts/1
+cloud-u+  4501  4500  1 17:09 pts/1    00:00:00 -bash
+cloud-u+  4556  4501  0 17:09 pts/1    00:00:00 ps -ef
+root     25513  3896  0 Apr07 pts/1    00:00:00 sh
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-24 17:09:50,249: %UNICON-INFO: smi-deployer is already connected
+
+2023-05-24 17:09:50,644: %UNICON-INFO: +++ smi-deployer with via 'cli': executing command 'env' +++
+env
+]133;C;SSH_CONNECTION=10.209.221.184 62868 10.62.157.163 22
+LANG=C.UTF-8
+ITERM_PREV_PS1=\[]133;D;$?]133;A\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ \[]133;B\]
+XDG_SESSION_ID=2953
+USER=cloud-user
+ITERM_ORIG_PS1=${debian_chroot:+($debian_chroot)}\u@\h:\w\$ 
+PWD=/home/cloud-user
+HOME=/home/cloud-user
+SSH_CLIENT=10.209.221.184 62868 22
+https_proxy=http://proxy-wsa.esl.cisco.com:80
+http_proxy=http://proxy-wsa.esl.cisco.com:80
+no_proxy=127.0.0.1,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12
+SSH_TTY=/dev/pts/1
+NO_PROXY=127.0.0.1,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12
+MAIL=/var/mail/cloud-user
+TERM=vt100
+SHELL=/bin/bash
+SHLVL=1
+LOGNAME=cloud-user
+XDG_RUNTIME_DIR=/run/user/1000
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+PS1=${debian_chroot:+($debian_chroot)}\u@\h:\w\$ 
+_=/usr/bin/env
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B

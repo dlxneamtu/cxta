@@ -1,0 +1,35 @@
+
+2023-05-24 20:38:33,434: %UNICON-INFO: +++ upe-1 logfile /home/cisco/cxta/device_logs/upe-1-20230524T203833397.log +++
+
+2023-05-24 20:38:33,436: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-24 20:38:33,440: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-24 20:38:33,455: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 139853922293312 +++
+
+2023-05-24 20:38:33,458: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Wed May 24 19:45:57 2023 from 10.209.221.184
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-24 20:38:34,525: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-24 20:38:34,532: %UNICON-INFO: connection to upe-1
+ssh -l cloud-user 17.3.11.51
+]133;C;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:iDdm4H81uURIgAAcWvoc4tw+g0pSPHyhALGeOz9O0Cg.
+Please contact your system administrator.
+Add correct host key in /home/cloud-user/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in /home/cloud-user/.ssh/known_hosts:51
+  remove with:
+  ssh-keygen -f "/home/cloud-user/.ssh/known_hosts" -R "17.3.11.51"
+ECDSA host key for 17.3.11.51 has changed and you have requested strict checking.
+Host key verification failed.
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;255]133;Acloud-user@smi-deployer:~$ ]133;B

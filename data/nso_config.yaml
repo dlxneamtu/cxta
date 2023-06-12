@@ -1,0 +1,24 @@
+nso: nso-576
+
+service_template: |
+    <loopback-service>
+      <name>{{ name }}</name>
+      <device>{{ device }}</device>
+      <loopback-interface-id>{{ loopback_id }}</loopback-interface-id>
+      <loopback-ip-address>{{ loopback_ip }}</loopback-ip-address>
+    </loopback-service>
+
+diffs:
+  src:
+    - |
+      Mon May 29 08:52:57.891 UTC
+    - |
+      Mon May 29 08:52:57.891 UTC
+      interface Loopback163
+       ipv4 address 1.1.163.52 255.255.255.255
+
+loopback_service:
+  name: MyLoopbackService
+  device: upe-2
+  loopback_id: 164
+  loopback_ip: 1.1.164.52

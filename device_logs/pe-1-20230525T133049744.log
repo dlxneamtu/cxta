@@ -1,0 +1,84 @@
+
+2023-05-25 13:30:49,761: %UNICON-INFO: +++ pe-1 logfile /home/cisco/cxta/device_logs/pe-1-20230525T133049744.log +++
+
+2023-05-25 13:30:49,763: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-25 13:30:49,767: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-25 13:30:49,776: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140557143637200 +++
+
+2023-05-25 13:30:49,778: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Thu May 25 13:30:47 2023 from 10.209.205.222
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-25 13:30:51,742: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-25 13:30:51,748: %UNICON-INFO: connection to pe-1
+ssh -l cisco 17.3.11.71
+]133;C;Password: 
+Last login: Thu May 25 13:26:30 2023 from 17.3.11.181
+
+
+
+RP/0/RP0/CPU0:pe-1#
+
+2023-05-25 13:30:52,535: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-25 13:30:52,872: %UNICON-INFO: +++ pe-1 with via 'cli': executing command 'term length 0' +++
+term length 0
+Thu May 25 13:28:53.894 UTC
+RP/0/RP0/CPU0:pe-1#
+
+2023-05-25 13:30:53,425: %UNICON-INFO: +++ pe-1 with via 'cli': executing command 'term width 0' +++
+term width 0
+Thu May 25 13:28:54.483 UTC
+RP/0/RP0/CPU0:pe-1#
+
+2023-05-25 13:30:54,094: %UNICON-INFO: +++ pe-1 with via 'cli': executing command 'show version' +++
+show version
+Thu May 25 13:28:55.108 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+pe-1 uptime is 1 week, 4 days, 16 hours, 41 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:pe-1#
+
+2023-05-25 13:31:19,591: %UNICON-INFO: +++ pe-1 with via 'cli': executing command 'show bgp ipv4 unicast summary' +++
+show bgp ipv4 unicast summary
+Thu May 25 13:29:20.650 UTC
+BGP router identifier 1.1.1.71, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 84
+BGP table nexthop route policy: 
+BGP main routing table version 84
+BGP NSR Initial initsync version 4 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker              84         84         84         84          84           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.87          0 21183   16905   16843       84    0    0     1w4d         15
+1.1.1.88          0 21183       0       0        0    0    0 00:00:00 Idle
+
+RP/0/RP0/CPU0:pe-1#

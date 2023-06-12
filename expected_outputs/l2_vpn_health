@@ -1,0 +1,28 @@
+cloud-user@ncs# devices device upe-4 live-status exec show l2vpn xconnect group BLACK_L2
+result
+Thu May 25 08:14:29.599 UTC
+Legend: ST = State, UP = Up, DN = Down, AD = Admin Down, UR = Unresolved,
+        SB = Standby, SR = Standby Ready, (PP) = Partially Programmed,
+        LU = Local Up, RU = Remote Up, CO = Connected, (SI) = Seamless Inactive
+
+XConnect                   Segment 1                       Segment 2
+Group      Name       ST   Description            ST       Description            ST
+------------------------   -----------------------------   -----------------------------
+BLACK_L2   BLACK_L2   UP   Gi0/0/0/1              UP       EVPN 24,22,1.1.1.52    UP
+----------------------------------------------------------------------------------------
+
+RP/0/RP0/CPU0:upe-4#
+cloud-user@ncs# devices device upe-2 live-status exec show l2vpn xconnect group BLACK_L2
+result
+Thu May 25 08:14:42.357 UTC
+Legend: ST = State, UP = Up, DN = Down, AD = Admin Down, UR = Unresolved,
+        SB = Standby, SR = Standby Ready, (PP) = Partially Programmed,
+        LU = Local Up, RU = Remote Up, CO = Connected, (SI) = Seamless Inactive
+
+XConnect                   Segment 1                       Segment 2
+Group      Name       ST   Description            ST       Description            ST
+------------------------   -----------------------------   -----------------------------
+BLACK_L2   BLACK_L2   UP   Gi0/0/0/1              UP       EVPN 24,44,1.1.1.54    UP
+----------------------------------------------------------------------------------------
+RP/0/RP0/CPU0:upe-2#
+cloud-user@ncs#

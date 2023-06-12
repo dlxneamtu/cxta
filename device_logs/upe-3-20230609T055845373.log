@@ -1,0 +1,209 @@
+
+2023-06-09 05:58:45,387: %UNICON-INFO: +++ upe-3 logfile /home/cisco/cxta/device_logs/upe-3-20230609T055845373.log +++
+
+2023-06-09 05:58:45,389: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-06-09 05:58:45,392: %UNICON-INFO: connection via proxy jumphost
+
+2023-06-09 05:58:45,400: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140532699162848 +++
+
+2023-06-09 05:58:45,402: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Fri Jun  9 05:58:42 2023 from 10.61.194.219
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]
+
+2023-06-09 05:58:46,340: %UNICON-INFO: +++ initializing handle +++
+
+2023-06-09 05:58:46,343: %UNICON-INFO: connection to upe-3
+1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;Bssh -l cisco 17.3.11.53
+]133;C;Password: 
+Last login: Fri Jun  9 05:54:46 2023 from 17.3.11.162
+
+
+
+RP/0/RP0/CPU0:upe-3#
+
+2023-06-09 05:58:46,839: %UNICON-INFO: +++ initializing handle +++
+
+2023-06-09 05:58:47,172: %UNICON-INFO: +++ upe-3 with via 'cli': executing command 'term length 0' +++
+term length 0
+Fri Jun  9 05:56:16.062 UTC
+RP/0/RP0/CPU0:upe-3#
+
+2023-06-09 05:58:47,794: %UNICON-INFO: +++ upe-3 with via 'cli': executing command 'term width 0' +++
+term width 0
+Fri Jun  9 05:56:16.678 UTC
+RP/0/RP0/CPU0:upe-3#
+
+2023-06-09 05:58:48,350: %UNICON-INFO: +++ upe-3 with via 'cli': executing command 'show version' +++
+show version
+Fri Jun  9 05:56:17.235 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+upe-3 uptime is 3 weeks, 4 days, 22 hours, 26 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:upe-3#
+
+2023-06-09 05:59:28,186: %UNICON-INFO: +++ upe-3 with via 'cli': executing command 'show isis neighbors Gi0/0/0/2' +++
+show isis neighbors Gi0/0/0/2
+Fri Jun  9 05:56:57.085 UTC
+
+IS-IS ACCESS neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+upe-4          Gi0/0/0/2        *PtoP*         Up    28       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:upe-3#
+
+2023-06-09 05:59:28,883: %UNICON-INFO: +++ upe-3 with via 'cli': executing command 'show isis neighbors Gi0/0/0/3' +++
+show isis neighbors Gi0/0/0/3
+Fri Jun  9 05:56:57.780 UTC
+
+IS-IS ACCESS neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+npe-3          Gi0/0/0/3        *PtoP*         Up    25       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:upe-3#
+
+2023-06-09 05:59:57,948: %UNICON-INFO: +++ upe-3 with via 'cli': executing command 'show bgp ipv4 unicast summary' +++
+show bgp ipv4 unicast summary
+Fri Jun  9 05:57:26.863 UTC
+BGP router identifier 1.1.1.53, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 25
+BGP table nexthop route policy: 
+BGP main routing table version 25
+BGP NSR Initial initsync version 21 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker              25         25         25         25          25           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.63          0 21183   37369   37350       25    0    0     3w4d         15
+1.1.1.64          0 21183   37364   37350       25    0    0     3w4d         15
+
+RP/0/RP0/CPU0:upe-3#
+
+2023-06-09 05:59:58,733: %UNICON-INFO: +++ upe-3 with via 'cli': executing command 'show bgp ipv4 unicast summary' +++
+show bgp ipv4 unicast summary
+Fri Jun  9 05:57:27.636 UTC
+BGP router identifier 1.1.1.53, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 25
+BGP table nexthop route policy: 
+BGP main routing table version 25
+BGP NSR Initial initsync version 21 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker              25         25         25         25          25           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.63          0 21183   37369   37350       25    0    0     3w4d         15
+1.1.1.64          0 21183   37364   37350       25    0    0     3w4d         15
+
+RP/0/RP0/CPU0:upe-3#
+
+2023-06-09 06:00:12,182: %UNICON-INFO: +++ upe-3 with via 'cli': executing command 'show bgp vpnv4 unicast summary' +++
+show bgp vpnv4 unicast summary
+Fri Jun  9 05:57:41.074 UTC
+BGP router identifier 1.1.1.53, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0x0
+BGP table nexthop route policy: 
+BGP main routing table version 109
+BGP NSR Initial initsync version 13 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker             109        109        109        109         109           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.87          0 21183   37388   37364      109    0    0     3w1d          5
+
+RP/0/RP0/CPU0:upe-3#
+
+2023-06-09 06:00:27,269: %UNICON-INFO: +++ upe-3 with via 'cli': executing command 'show segment-routing traffic-eng pcc ipv4 peer brief' +++
+show segment-routing traffic-eng pcc ipv4 peer brief
+Fri Jun  9 05:57:56.170 UTC
+
+             Address   Precedence        State    Learned From
+-------------------- ------------ ------------ ---------------
+           1.1.1.167          255           up          config
+
+RP/0/RP0/CPU0:upe-3#
+
+2023-06-09 06:00:35,905: %UNICON-INFO: +++ upe-3 with via 'cli': executing command 'sho ip route vrf GREEN' +++
+sho ip route vrf GREEN
+Fri Jun  9 05:58:04.811 UTC
+
+Codes: C - connected, S - static, R - RIP, B - BGP, (>) - Diversion path
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - ISIS, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, su - IS-IS summary null, * - candidate default
+       U - per-user static route, o - ODR, L - local, G  - DAGR, l - LISP
+       A - access/subscriber, a - Application route
+       M - mobile route, r - RPL, t - Traffic Engineering, (!) - FRR Backup path
+
+Gateway of last resort is not set
+
+B    10.30.11.0/24 [200/0] via 1.1.1.51 (nexthop in vrf default), 3w1d
+C    10.30.33.0/24 is directly connected, 3w4d, GigabitEthernet0/0/0/0.300
+L    10.30.33.53/32 is directly connected, 3w4d, GigabitEthernet0/0/0/0.300
+RP/0/RP0/CPU0:upe-3#
+
+2023-06-09 06:00:36,653: %UNICON-INFO: +++ upe-3 with via 'cli': executing command 'sho ip route vrf ORANGE' +++
+sho ip route vrf ORANGE
+Fri Jun  9 05:58:05.561 UTC
+
+Codes: C - connected, S - static, R - RIP, B - BGP, (>) - Diversion path
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - ISIS, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, su - IS-IS summary null, * - candidate default
+       U - per-user static route, o - ODR, L - local, G  - DAGR, l - LISP
+       A - access/subscriber, a - Application route
+       M - mobile route, r - RPL, t - Traffic Engineering, (!) - FRR Backup path
+
+Gateway of last resort is not set
+
+B    10.31.11.0/24 [200/0] via 1.1.1.51 (nexthop in vrf default), 3w1d
+C    10.31.33.0/24 is directly connected, 3w4d, GigabitEthernet0/0/0/0.310
+L    10.31.33.53/32 is directly connected, 3w4d, GigabitEthernet0/0/0/0.310
+RP/0/RP0/CPU0:upe-3#

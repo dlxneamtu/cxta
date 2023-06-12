@@ -1,0 +1,135 @@
+
+2023-05-25 13:23:47,273: %UNICON-INFO: +++ upe-1 logfile /home/cisco/cxta/device_logs/upe-1-20230525T132347254.log +++
+
+2023-05-25 13:23:47,274: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-25 13:23:47,279: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-25 13:23:47,299: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 139835236337552 +++
+
+2023-05-25 13:23:47,301: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Thu May 25 13:23:47 2023 from 10.209.205.222
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-25 13:23:48,355: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-25 13:23:48,361: %UNICON-INFO: connection to upe-1
+ssh -l cisco 17.3.11.51
+]133;C;Password: 
+Last login: Thu May 25 13:20:14 2023 from 17.3.11.162
+
+
+
+RP/0/RP0/CPU0:upe-1#
+
+2023-05-25 13:23:48,882: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-25 13:23:49,206: %UNICON-INFO: +++ upe-1 with via 'cli': executing command 'term length 0' +++
+term length 0
+Thu May 25 13:21:46.319 UTC
+RP/0/RP0/CPU0:upe-1#
+
+2023-05-25 13:23:49,806: %UNICON-INFO: +++ upe-1 with via 'cli': executing command 'term width 0' +++
+term width 0
+Thu May 25 13:21:46.912 UTC
+RP/0/RP0/CPU0:upe-1#
+
+2023-05-25 13:23:50,404: %UNICON-INFO: +++ upe-1 with via 'cli': executing command 'show version' +++
+show version
+Thu May 25 13:21:47.541 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+upe-1 uptime is 1 week, 4 days, 5 hours, 51 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:upe-1#
+
+2023-05-25 13:24:32,376: %UNICON-INFO: +++ upe-1 with via 'cli': executing command 'show bgp ipv4 unicast summary' +++
+show bgp ipv4 unicast summary
+Thu May 25 13:22:29.506 UTC
+BGP router identifier 1.1.1.51, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 30
+BGP table nexthop route policy: 
+BGP main routing table version 30
+BGP NSR Initial initsync version 6 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker              30         30         30         30          30           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.61          0 21183   16207   16196       30    0    0     1w4d         13
+1.1.1.62          0 21183   16209   16196       30    0    0     1w4d         15
+
+RP/0/RP0/CPU0:upe-1#
+
+2023-05-25 13:24:33,173: %UNICON-INFO: +++ upe-1 with via 'cli': executing command 'show bgp ipv4 unicast summary' +++
+show bgp ipv4 unicast summary
+Thu May 25 13:22:30.305 UTC
+BGP router identifier 1.1.1.51, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 30
+BGP table nexthop route policy: 
+BGP main routing table version 30
+BGP NSR Initial initsync version 6 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker              30         30         30         30          30           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.61          0 21183   16207   16196       30    0    0     1w4d         13
+1.1.1.62          0 21183   16210   16196       30    0    0     1w4d         15
+
+RP/0/RP0/CPU0:upe-1#
+
+2023-05-25 13:24:49,871: %UNICON-INFO: +++ upe-1 with via 'cli': executing command 'show bgp vpnv4 unicast summary' +++
+show bgp vpnv4 unicast summary
+Thu May 25 13:22:46.981 UTC
+BGP router identifier 1.1.1.51, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0x0
+BGP table nexthop route policy: 
+BGP main routing table version 109
+BGP NSR Initial initsync version 10 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker             109        109        109        109         109           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.87          0 21183   16233   16208      109    0    0     1w0d          5
+
+RP/0/RP0/CPU0:upe-1#

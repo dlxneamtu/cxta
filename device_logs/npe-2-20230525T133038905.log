@@ -1,0 +1,112 @@
+
+2023-05-25 13:30:38,922: %UNICON-INFO: +++ npe-2 logfile /home/cisco/cxta/device_logs/npe-2-20230525T133038905.log +++
+
+2023-05-25 13:30:38,924: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-25 13:30:38,927: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-25 13:30:38,935: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140557146133024 +++
+
+2023-05-25 13:30:38,937: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Thu May 25 13:30:36 2023 from 10.209.205.222
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-25 13:30:40,080: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-25 13:30:40,084: %UNICON-INFO: connection to npe-2
+ssh -l cisco 17.3.11.62
+]133;C;Password: 
+Last login: Thu May 25 13:27:50 2023 from 17.3.11.181
+
+
+
+RP/0/RP0/CPU0:npe-2#
+
+2023-05-25 13:30:40,578: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-25 13:30:40,913: %UNICON-INFO: +++ npe-2 with via 'cli': executing command 'term length 0' +++
+term length 0
+Thu May 25 13:28:38.055 UTC
+RP/0/RP0/CPU0:npe-2#
+
+2023-05-25 13:30:41,552: %UNICON-INFO: +++ npe-2 with via 'cli': executing command 'term width 0' +++
+term width 0
+Thu May 25 13:28:38.652 UTC
+RP/0/RP0/CPU0:npe-2#
+
+2023-05-25 13:30:42,109: %UNICON-INFO: +++ npe-2 with via 'cli': executing command 'show version' +++
+show version
+Thu May 25 13:28:39.212 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+npe-2 uptime is 1 week, 4 days, 5 hours, 58 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:npe-2#
+
+2023-05-25 13:31:14,642: %UNICON-INFO: +++ npe-2 with via 'cli': executing command 'show bgp ipv4 unicast summary' +++
+show bgp ipv4 unicast summary
+Thu May 25 13:29:11.753 UTC
+BGP router identifier 1.1.1.61, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 27
+BGP table nexthop route policy: 
+BGP main routing table version 27
+BGP NSR Initial initsync version 26 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker              27         27         27         27          27           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.51          0 21183   16202   16216       27    0    0     1w4d          0
+1.1.1.52          0 21183   16202   16216       27    0    0     1w4d          0
+1.1.1.87          0 21183   16236   16245       27    0    0     1w4d          6
+
+RP/0/RP0/CPU0:npe-2#
+
+2023-05-25 13:31:15,467: %UNICON-INFO: +++ npe-2 with via 'cli': executing command 'show bgp ipv4 unicast summary' +++
+show bgp ipv4 unicast summary
+Thu May 25 13:29:12.561 UTC
+BGP router identifier 1.1.1.61, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 27
+BGP table nexthop route policy: 
+BGP main routing table version 27
+BGP NSR Initial initsync version 26 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker              27         27         27         27          27           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.51          0 21183   16202   16216       27    0    0     1w4d          0
+1.1.1.52          0 21183   16202   16216       27    0    0     1w4d          0
+1.1.1.87          0 21183   16236   16245       27    0    0     1w4d          6
+
+RP/0/RP0/CPU0:npe-2#

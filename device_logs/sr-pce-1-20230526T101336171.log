@@ -1,0 +1,46 @@
+
+2023-05-26 10:13:36,187: %UNICON-INFO: +++ sr-pce-1 logfile /home/cisco/cxta/device_logs/sr-pce-1-20230526T101336171.log +++
+
+2023-05-26 10:13:36,189: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+Warning: Permanently added '10.62.157.167' (ECDSA) to the list of known hosts.
+
+
+2023-05-26 10:13:37,036: %UNICON-INFO: +++ connection to spawn: ssh -l admin 10.62.157.167, id: 140685330079360 +++
+
+2023-05-26 10:13:37,038: %UNICON-INFO: connection to sr-pce-1
+(admin@10.62.157.167) Password: 
+
+
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 10:13:38,398: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-26 10:13:38,732: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'term length 0' +++
+term length 0
+Fri May 26 10:15:47.013 UTC
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 10:13:39,424: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'term width 0' +++
+term width 0
+Fri May 26 10:15:47.676 UTC
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 10:13:40,075: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show version' +++
+show version
+Fri May 26 10:15:48.377 UTC
+Cisco IOS XR Software, Version 7.7.1
+Copyright (c) 2013-2022 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : ingunawa
+ Built On     : Mon Jul 25 02:41:45 PDT 2022
+ Built Host   : iox-ucs-067
+ Workspace    : /auto/srcarchive12/prod/7.7.1/xrv9k/ws
+ Version      : 7.7.1
+ Location     : /opt/cisco/XR/packages/
+ Label        : 7.7.1-0
+
+cisco IOS-XRv 9000 () processor
+System uptime is 15 weeks 3 days 23 hours 14 minutes
+
+RP/0/RP0/CPU0:sr-pce-1#

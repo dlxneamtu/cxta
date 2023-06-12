@@ -1,0 +1,58 @@
+
+2023-05-29 21:01:55,388: %UNICON-INFO: +++ upe-2 logfile /home/cisco/cxta/device_logs/upe-2-20230529T210155374.log +++
+
+2023-05-29 21:01:55,389: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-29 21:01:55,393: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-29 21:01:55,408: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 139916217304592 +++
+
+2023-05-29 21:01:55,410: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Mon May 29 20:38:48 2023 from 10.209.208.72
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-29 21:01:56,376: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-29 21:01:56,382: %UNICON-INFO: connection to upe-2
+ssh -l cisco 17.3.11.52
+]133;C;Password: 
+Last login: Mon May 29 20:55:03 2023 from 17.3.11.162
+
+
+
+RP/0/RP0/CPU0:upe-2#
+
+2023-05-29 21:01:56,858: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-29 21:01:57,192: %UNICON-INFO: +++ upe-2 with via 'cli': executing command 'term length 0' +++
+term length 0
+Mon May 29 20:59:46.080 UTC
+RP/0/RP0/CPU0:upe-2#
+
+2023-05-29 21:01:57,777: %UNICON-INFO: +++ upe-2 with via 'cli': executing command 'term width 0' +++
+term width 0
+Mon May 29 20:59:46.668 UTC
+RP/0/RP0/CPU0:upe-2#
+
+2023-05-29 21:01:58,378: %UNICON-INFO: +++ upe-2 with via 'cli': executing command 'show version' +++
+show version
+Mon May 29 20:59:47.271 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+upe-2 uptime is 2 weeks, 1 day, 13 hours, 29 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:upe-2#

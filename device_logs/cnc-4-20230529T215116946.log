@@ -1,0 +1,45 @@
+
+2023-05-29 21:51:16,954: %UNICON-INFO: +++ cnc-4 logfile /home/cisco/cxta/device_logs/cnc-4-20230529T215116946.log +++
+
+2023-05-29 21:51:16,955: %UNICON-INFO: +++ Unicon plugin linux (unicon.plugins.linux) +++
+
+2023-05-29 21:51:16,967: %UNICON-INFO: +++ connection to spawn: ssh -l cw-admin 10.62.157.175, id: 140314371981424 +++
+
+2023-05-29 21:51:16,993: %UNICON-INFO: connection to cnc-4
+Warning: Permanently added '10.62.157.175' (ECDSA) to the list of known hosts.
+(cw-admin@10.62.157.175) Password: 
+Last login: Mon May 29 21:45:55 2023 from 10.209.208.72
+Cisco Crosswork
+
+  #####  ######  #######  #####   #####  #     # ####### ######  #    #
+ #     # #     # #     # #     # #     # #  #  # #     # #     # #   #
+ #       #     # #     # #       #       #  #  # #     # #     # #  #
+ #       ######  #     #  #####   #####  #  #  # #     # ######  ###
+ #       #   #   #     #       #       # #  #  # #     # #   #   #  #
+ #     # #    #  #     # #     # #     # #  #  # #     # #    #  #   #
+  #####  #     # #######  #####   #####   ## ##  ####### #     # #    #
+
+
+
+Copyright (c) 2022 by Cisco Systems, Inc.
+Version: release-4.4.0 (Build 250)
+Built on: Oct-27-2022 08:49 AM UTC
+
+cw-admin@10-62-157-180-hybrid:~$ 
+
+2023-05-29 21:51:18,108: %UNICON-INFO: Learned hostname: 10-62-157-180-hybrid
+
+cw-admin@10-62-157-180-hybrid:~$ 
+
+2023-05-29 21:51:18,205: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-29 21:51:19,101: %UNICON-INFO: +++ 10-62-157-180-hybrid with via 'cli': executing command 'sudo pwd' +++
+sudo pwd
+[sudo] password for cw-admin: 
+/home/cw-admin
+cw-admin@10-62-157-180-hybrid:~$ 
+
+2023-05-29 21:51:19,732: %UNICON-INFO: +++ 10-62-157-180-hybrid with via 'cli': executing command 'kubectl get nodes' +++
+kubectl get nodes
+error: no configuration has been provided, try setting KUBERNETES_MASTER environment variable
+cw-admin@10-62-157-180-hybrid:~$ 

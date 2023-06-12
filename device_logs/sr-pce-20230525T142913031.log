@@ -1,0 +1,18 @@
+
+2023-05-25 14:29:13,042: %UNICON-INFO: +++ sr-pce logfile /home/cisco/cxta/device_logs/sr-pce-20230525T142913031.log +++
+
+2023-05-25 14:29:13,044: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+Warning: Permanently added '10.62.157.167' (ECDSA) to the list of known hosts.
+
+
+2023-05-25 14:29:13,669: %UNICON-INFO: +++ connection to spawn: ssh -l admin 10.62.157.167, id: 139874409949456 +++
+
+2023-05-25 14:29:13,672: %UNICON-INFO: connection to sr-pce
+(admin@10.62.157.167) Password: 
+
+
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-25 14:29:14,720: %UNICON-INFO: +++ initializing handle +++
+
+RP/0/RP0/CPU0:sr-pce-1#

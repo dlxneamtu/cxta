@@ -1,0 +1,403 @@
+
+2023-05-29 22:14:00,318: %UNICON-INFO: +++ cnc-4 logfile /home/cisco/cxta/device_logs/cnc-4-20230529T221400308.log +++
+
+2023-05-29 22:14:00,320: %UNICON-INFO: +++ Unicon plugin linux (unicon.plugins.linux) +++
+
+2023-05-29 22:14:00,330: %UNICON-INFO: +++ connection to spawn: ssh -l cw-admin 10.62.157.175, id: 140657600012736 +++
+
+2023-05-29 22:14:00,332: %UNICON-INFO: connection to cnc-4
+Warning: Permanently added '10.62.157.175' (ECDSA) to the list of known hosts.
+(cw-admin@10.62.157.175) Password: 
+Last login: Mon May 29 22:06:25 2023 from 10.209.208.72
+Cisco Crosswork
+
+  #####  ######  #######  #####   #####  #     # ####### ######  #    #
+ #     # #     # #     # #     # #     # #  #  # #     # #     # #   #
+ #       #     # #     # #       #       #  #  # #     # #     # #  #
+ #       ######  #     #  #####   #####  #  #  # #     # ######  ###
+ #       #   #   #     #       #       # #  #  # #     # #   #   #  #
+ #     # #    #  #     # #     # #     # #  #  # #     # #    #  #   #
+  #####  #     # #######  #####   #####   ## ##  ####### #     # #    #
+
+
+
+Copyright (c) 2022 by Cisco Systems, Inc.
+Version: release-4.4.0 (Build 250)
+Built on: Oct-27-2022 08:49 AM UTC
+
+cw-admin@10-62-157-180-hybrid:~$ 
+
+2023-05-29 22:14:01,550: %UNICON-INFO: Learned hostname: 10-62-157-180-hybrid
+
+cw-admin@10-62-157-180-hybrid:~$ 
+
+2023-05-29 22:14:01,646: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-29 22:14:02,603: %UNICON-INFO: +++ 10-62-157-180-hybrid with via 'cli': executing command 'sudo su' +++
+sudo su
+[sudo] password for cw-admin: 
+root@10-62-157-180-hybrid:/home/cw-admin# 
+
+2023-05-29 22:14:03,576: %UNICON-INFO: +++ 10-62-157-180-hybrid with via 'cli': executing command 'kubectl get nodes' +++
+kubectl get nodes
+NAME                             STATUS   ROLES    AGE    VERSION
+10-62-157-176-hybrid.cisco.com   Ready    master   105d   v1.18.0
+10-62-157-177-worker.cisco.com   Ready    <none>   105d   v1.18.0
+10-62-157-178-hybrid.cisco.com   Ready    master   105d   v1.18.0
+10-62-157-180-hybrid.cisco.com   Ready    master   105d   v1.18.0
+10-62-157-182-worker.cisco.com   Ready    <none>   52d    v1.18.0
+root@10-62-157-180-hybrid:/home/cw-admin# 
+
+2023-05-29 22:14:04,295: %UNICON-INFO: +++ 10-62-157-180-hybrid with via 'cli': executing command 'kubectl get pod -A' +++
+kubectl get pod -A
+NAMESPACE     NAME                                                     READY   STATUS    RESTARTS   AGE
+default       alarms-0                                                 1/1     Running   1          105d
+default       alarms-1                                                 1/1     Running   1          105d
+default       astackserver-7c489f7c8-4jwf9                             1/1     Running   1          105d
+default       cas-0                                                    1/1     Running   2          105d
+default       cas-1                                                    1/1     Running   1          105d
+default       cat-fp-deployment-manager-694bc44d99-ln84c               1/1     Running   1          105d
+default       cat-inventory-0                                          1/1     Running   1          105d
+default       cat-inventory-1                                          1/1     Running   1          105d
+default       cat-restconf-0                                           1/1     Running   0          5d11h
+default       cat-restconf-1                                           1/1     Running   0          5d11h
+default       cat-service-overlay-0                                    1/1     Running   0          5d12h
+default       cat-service-overlay-1                                    1/1     Running   0          5d12h
+default       cat-ui-service-0                                         1/1     Running   0          5d12h
+default       cat-ui-service-1                                         1/1     Running   0          5d12h
+default       cw-aa-ag-mgr-0                                           1/1     Running   0          5d10h
+default       cw-aa-ag-mgr-1                                           1/1     Running   0          5d10h
+default       cw-aa-app-68447fc597-ppc9v                               1/1     Running   0          5d10h
+default       cw-aa-config-mgr-57b56b8fc5-2s6kf                        1/1     Running   0          5d10h
+default       cw-aa-dss-948557545-7vbxw                                1/1     Running   0          5d10h
+default       cw-aa-exp-orch-0                                         1/1     Running   0          5d10h
+default       cw-aa-exp-orch-1                                         1/1     Running   0          5d10h
+default       cw-aa-exp-tracker-0                                      1/1     Running   0          5d10h
+default       cw-aa-exp-tracker-1                                      1/1     Running   0          5d10h
+default       cw-aa-hp-mgr-6985b7d7db-d957l                            1/1     Running   0          5d10h
+default       cw-aa-ms-64974497fc-csvw2                                1/1     Running   0          5d10h
+default       cw-clms-97f6db4fc-sjvzd                                  1/1     Running   1          105d
+default       cw-common-service-78ddcf9b45-x646d                       1/1     Running   0          52d
+default       cw-data-retention-service-5c674c95d4-b8f2b               1/1     Running   0          52d
+default       cw-distributed-cache-0                                   1/1     Running   1          105d
+default       cw-distributed-cache-1                                   1/1     Running   1          105d
+default       cw-distributed-cache-2                                   1/1     Running   1          105d
+default       cw-event-based-inventory-54477b48bc-vxcdt                1/1     Running   0          52d
+default       cw-fault-alarm-forwarding-service-6c86fb58c7-r9l5z       1/1     Running   0          52d
+default       cw-fault-alarm-rest-service-7f5fcd468-xtsvk              1/1     Running   0          52d
+default       cw-fault-event-processing-service-7c4b7f5dff-pl749       1/1     Running   0          52d
+default       cw-ftp-0                                                 1/1     Running   1          105d
+default       cw-ftp-1                                                 1/1     Running   1          105d
+default       cw-ftp-2                                                 1/1     Running   1          105d
+default       cw-geo-service-c44c9599f-t4v45                           1/1     Running   1          105d
+default       cw-grouping-service-6b84dc9bbb-knx8f                     1/1     Running   1          105d
+default       cw-icon-server-5466c6b56-w9n8s                           1/1     Running   1          105d
+default       cw-inventory-79697749cd-8d2xg                            1/1     Running   0          52d
+default       cw-inventory-collector-0                                 1/1     Running   0          52d
+default       cw-inventory-collector-1                                 1/1     Running   0          52d
+default       cw-ipsec-gtnxt                                           1/1     Running   1          105d
+default       cw-ipsec-m49d9                                           1/1     Running   1          105d
+default       cw-ipsec-m9gxk                                           1/1     Running   0          52d
+default       cw-ipsec-n7lrp                                           1/1     Running   1          105d
+default       cw-ipsec-s96cz                                           1/1     Running   1          105d
+default       cw-proxy-0                                               1/1     Running   1          105d
+default       cw-proxy-1                                               1/1     Running   1          105d
+default       cw-proxy-2                                               1/1     Running   1          105d
+default       cw-sftp-0                                                1/1     Running   1          105d
+default       cw-sftp-1                                                1/1     Running   1          105d
+default       cw-sftp-2                                                1/1     Running   1          105d
+default       cw-swim-7bc87fb55b-9zfvd                                 1/1     Running   0          52d
+default       cw-timeseries-db-0                                       1/1     Running   1          105d
+default       cw-timeseries-db-1                                       1/1     Running   1          105d
+default       cw-topo-visualization-0                                  1/1     Running   0          5d13h
+default       cw-topo-visualization-1                                  1/1     Running   0          5d13h
+default       cw-views-service-f54c5fbc8-jghsg                         1/1     Running   1          105d
+default       dg-manager-0                                             1/1     Running   1          105d
+default       dg-manager-1                                             1/1     Running   1          105d
+default       docker-registry-965455fc-c56nx                           1/1     Running   1          105d
+default       engine-worker-0                                          1/1     Running   0          10d
+default       engine-worker-1                                          1/1     Running   0          10d
+default       engine-worker-2                                          1/1     Running   0          10d
+default       helios-0                                                 1/1     Running   1          105d
+default       helios-1                                                 1/1     Running   1          105d
+default       magellan-0                                               1/1     Running   1          105d
+default       magellan-1                                               1/1     Running   2          105d
+default       magellan-2                                               1/1     Running   1          105d
+default       nats-0                                                   1/1     Running   1          105d
+default       nats-1                                                   1/1     Running   1          105d
+default       nats-2                                                   1/1     Running   1          105d
+default       neo4j-topo-svc-0                                         1/1     Running   0          5d13h
+default       neo4j-topo-svc-1                                         1/1     Running   0          5d13h
+default       neo4j-topo-svc-2                                         1/1     Running   0          5d13h
+default       node-orchestrator-cpfrq                                  1/1     Running   1          105d
+default       node-orchestrator-gvrp8                                  1/1     Running   1          105d
+default       node-orchestrator-r5pp8                                  1/1     Running   0          52d
+default       node-orchestrator-rmrnt                                  1/1     Running   1          105d
+default       node-orchestrator-w2jxl                                  1/1     Running   1          105d
+default       nso-connector-0                                          1/1     Running   1          105d
+default       nso-connector-1                                          1/1     Running   1          105d
+default       oam-0                                                    1/1     Running   1          105d
+default       oam-1                                                    1/1     Running   1          105d
+default       optima-analytics-api-7cfd59f78b-lkl66                    1/1     Running   1          105d
+default       optima-analytics-service-797967d48d-j7nhs                1/1     Running   1          105d
+default       optima-bwod-5d7674d5f7-jcrj5                             1/1     Running   1          105d
+default       optima-bwopt-9fccf67bd-vn8tf                             1/1     Running   1          105d
+default       optima-engine-0                                          1/1     Running   0          10d
+default       optima-engine-1                                          1/1     Running   0          10d
+default       optima-lcm-797747c564-hzqjv                              1/1     Running   1          105d
+default       optima-pce-dispatcher-785b4fc769-fs75q                   1/1     Running   0          11d
+default       optima-restconf-v2-55868946b-sbbtf                       1/1     Running   1          105d
+default       optima-traffic-0                                         1/1     Running   1          105d
+default       optima-traffic-1                                         1/1     Running   1          105d
+default       optima-traffic-2                                         1/1     Running   1          105d
+default       optima-ui-service-744dc7c8f6-74b5b                       1/1     Running   0          5d13h
+default       robot-alerting-d5c57f456-fsddv                           1/1     Running   1          105d
+default       robot-dlminvmgr-0                                        1/1     Running   1          105d
+default       robot-dlminvmgr-1                                        1/1     Running   1          105d
+default       robot-etcd-0                                             1/1     Running   1          105d
+default       robot-etcd-1                                             1/1     Running   1          105d
+default       robot-etcd-2                                             1/1     Running   1          105d
+default       robot-kafka-0                                            1/1     Running   2          105d
+default       robot-kafka-1                                            1/1     Running   2          105d
+default       robot-kafka-2                                            1/1     Running   1          105d
+default       robot-postgres-0                                         1/1     Running   1          105d
+default       robot-postgres-1                                         1/1     Running   1          105d
+default       robot-postgres-2                                         1/1     Running   1          105d
+default       robot-topo-svc-0                                         1/1     Running   0          5d13h
+default       robot-topo-svc-1                                         1/1     Running   0          5d13h
+default       robot-topo-svc-2                                         1/1     Running   0          5d13h
+default       robot-ui-0                                               1/1     Running   1          105d
+default       robot-ui-1                                               1/1     Running   1          105d
+default       robot-ui-2                                               1/1     Running   1          105d
+default       robot-zookeeper-0                                        1/1     Running   1          105d
+default       robot-zookeeper-1                                        1/1     Running   1          105d
+default       robot-zookeeper-2                                        1/1     Running   1          105d
+default       tyk-0                                                    1/1     Running   1          105d
+default       tyk-1                                                    1/1     Running   1          105d
+default       tyk-2                                                    1/1     Running   2          105d
+kube-system   calico-kube-controllers-8656595cd-dkzlz                  1/1     Running   5          105d
+kube-system   calico-node-2vbqx                                        1/1     Running   1          105d
+kube-system   calico-node-df98j                                        1/1     Running   1          105d
+kube-system   calico-node-fmpb5                                        1/1     Running   0          52d
+kube-system   calico-node-lf7nb                                        1/1     Running   1          105d
+kube-system   calico-node-s7fdw                                        1/1     Running   1          105d
+kube-system   coredns-79dc5d4bf6-frjqt                                 1/1     Running   1          105d
+kube-system   coredns-79dc5d4bf6-h2n4j                                 1/1     Running   1          105d
+kube-system   coredns-79dc5d4bf6-rhqzg                                 1/1     Running   1          105d
+kube-system   etcd-10-62-157-176-hybrid.cisco.com                      1/1     Running   3          105d
+kube-system   etcd-10-62-157-178-hybrid.cisco.com                      1/1     Running   1          105d
+kube-system   etcd-10-62-157-180-hybrid.cisco.com                      1/1     Running   1          105d
+kube-system   kube-apiserver-10-62-157-176-hybrid.cisco.com            1/1     Running   2          105d
+kube-system   kube-apiserver-10-62-157-178-hybrid.cisco.com            1/1     Running   3          105d
+kube-system   kube-apiserver-10-62-157-180-hybrid.cisco.com            1/1     Running   1          105d
+kube-system   kube-controller-manager-10-62-157-176-hybrid.cisco.com   1/1     Running   2          105d
+kube-system   kube-controller-manager-10-62-157-178-hybrid.cisco.com   1/1     Running   1          105d
+kube-system   kube-controller-manager-10-62-157-180-hybrid.cisco.com   1/1     Running   1          105d
+kube-system   kube-proxy-7fsts                                         1/1     Running   2          105d
+kube-system   kube-proxy-98zpm                                         1/1     Running   1          105d
+kube-system   kube-proxy-kzmkm                                         1/1     Running   1          105d
+kube-system   kube-proxy-tbqd5                                         1/1     Running   1          52d
+kube-system   kube-proxy-xcm4z                                         1/1     Running   1          105d
+kube-system   kube-scheduler-10-62-157-176-hybrid.cisco.com            1/1     Running   2          105d
+kube-system   kube-scheduler-10-62-157-178-hybrid.cisco.com            1/1     Running   2          105d
+kube-system   kube-scheduler-10-62-157-180-hybrid.cisco.com            1/1     Running   1          105d
+kube-system   node-local-dns-6bswc                                     1/1     Running   1          52d
+kube-system   node-local-dns-6r5pj                                     1/1     Running   1          105d
+kube-system   node-local-dns-7jhwn                                     1/1     Running   1          105d
+kube-system   node-local-dns-f5ggc                                     1/1     Running   1          105d
+kube-system   node-local-dns-z6284                                     1/1     Running   1          105d
+kube-system   robot-orch-84d74f5f69-qhgfq                              1/1     Running   1          105d
+kube-system   robot-orch-84d74f5f69-sdbpx                              1/1     Running   1          105d
+kube-system   workerdns-2bk4s                                          1/1     Running   1          105d
+kube-system   workerdns-c4jph                                          1/1     Running   0          52d
+monitoring    grafana-core-854dbfdbdc-vkl5h                            1/1     Running   1          105d
+monitoring    kube-state-metrics-58766c9f95-526qd                      1/1     Running   1          105d
+monitoring    node-directory-size-metrics-7sc6b                        2/2     Running   2          105d
+monitoring    node-directory-size-metrics-chr82                        2/2     Running   2          105d
+monitoring    node-directory-size-metrics-hdltv                        2/2     Running   0          52d
+monitoring    node-directory-size-metrics-lh26c                        2/2     Running   2          105d
+monitoring    node-directory-size-metrics-mc5jn                        2/2     Running   2          105d
+monitoring    prometheus-core-7647bfc77-flgzv                          1/1     Running   1          105d
+monitoring    prometheus-node-exporter-278zg                           1/1     Running   1          105d
+monitoring    prometheus-node-exporter-drbfd                           1/1     Running   0          52d
+monitoring    prometheus-node-exporter-m5j5d                           1/1     Running   1          105d
+monitoring    prometheus-node-exporter-nfg77                           1/1     Running   1          105d
+monitoring    prometheus-node-exporter-p9kw2                           1/1     Running   1          105d
+root@10-62-157-180-hybrid:/home/cw-admin# 
+
+2023-05-29 22:14:05,743: %UNICON-INFO: +++ 10-62-157-180-hybrid with via 'cli': executing command 'kubectl get pod -A' +++
+kubectl get pod -A
+NAMESPACE     NAME                                                     READY   STATUS    RESTARTS   AGE
+default       alarms-0                                                 1/1     Running   1          105d
+default       alarms-1                                                 1/1     Running   1          105d
+default       astackserver-7c489f7c8-4jwf9                             1/1     Running   1          105d
+default       cas-0                                                    1/1     Running   2          105d
+default       cas-1                                                    1/1     Running   1          105d
+default       cat-fp-deployment-manager-694bc44d99-ln84c               1/1     Running   1          105d
+default       cat-inventory-0                                          1/1     Running   1          105d
+default       cat-inventory-1                                          1/1     Running   1          105d
+default       cat-restconf-0                                           1/1     Running   0          5d11h
+default       cat-restconf-1                                           1/1     Running   0          5d11h
+default       cat-service-overlay-0                                    1/1     Running   0          5d12h
+default       cat-service-overlay-1                                    1/1     Running   0          5d12h
+default       cat-ui-service-0                                         1/1     Running   0          5d12h
+default       cat-ui-service-1                                         1/1     Running   0          5d12h
+default       cw-aa-ag-mgr-0                                           1/1     Running   0          5d10h
+default       cw-aa-ag-mgr-1                                           1/1     Running   0          5d10h
+default       cw-aa-app-68447fc597-ppc9v                               1/1     Running   0          5d10h
+default       cw-aa-config-mgr-57b56b8fc5-2s6kf                        1/1     Running   0          5d10h
+default       cw-aa-dss-948557545-7vbxw                                1/1     Running   0          5d10h
+default       cw-aa-exp-orch-0                                         1/1     Running   0          5d10h
+default       cw-aa-exp-orch-1                                         1/1     Running   0          5d10h
+default       cw-aa-exp-tracker-0                                      1/1     Running   0          5d10h
+default       cw-aa-exp-tracker-1                                      1/1     Running   0          5d10h
+default       cw-aa-hp-mgr-6985b7d7db-d957l                            1/1     Running   0          5d10h
+default       cw-aa-ms-64974497fc-csvw2                                1/1     Running   0          5d10h
+default       cw-clms-97f6db4fc-sjvzd                                  1/1     Running   1          105d
+default       cw-common-service-78ddcf9b45-x646d                       1/1     Running   0          52d
+default       cw-data-retention-service-5c674c95d4-b8f2b               1/1     Running   0          52d
+default       cw-distributed-cache-0                                   1/1     Running   1          105d
+default       cw-distributed-cache-1                                   1/1     Running   1          105d
+default       cw-distributed-cache-2                                   1/1     Running   1          105d
+default       cw-event-based-inventory-54477b48bc-vxcdt                1/1     Running   0          52d
+default       cw-fault-alarm-forwarding-service-6c86fb58c7-r9l5z       1/1     Running   0          52d
+default       cw-fault-alarm-rest-service-7f5fcd468-xtsvk              1/1     Running   0          52d
+default       cw-fault-event-processing-service-7c4b7f5dff-pl749       1/1     Running   0          52d
+default       cw-ftp-0                                                 1/1     Running   1          105d
+default       cw-ftp-1                                                 1/1     Running   1          105d
+default       cw-ftp-2                                                 1/1     Running   1          105d
+default       cw-geo-service-c44c9599f-t4v45                           1/1     Running   1          105d
+default       cw-grouping-service-6b84dc9bbb-knx8f                     1/1     Running   1          105d
+default       cw-icon-server-5466c6b56-w9n8s                           1/1     Running   1          105d
+default       cw-inventory-79697749cd-8d2xg                            1/1     Running   0          52d
+default       cw-inventory-collector-0                                 1/1     Running   0          52d
+default       cw-inventory-collector-1                                 1/1     Running   0          52d
+default       cw-ipsec-gtnxt                                           1/1     Running   1          105d
+default       cw-ipsec-m49d9                                           1/1     Running   1          105d
+default       cw-ipsec-m9gxk                                           1/1     Running   0          52d
+default       cw-ipsec-n7lrp                                           1/1     Running   1          105d
+default       cw-ipsec-s96cz                                           1/1     Running   1          105d
+default       cw-proxy-0                                               1/1     Running   1          105d
+default       cw-proxy-1                                               1/1     Running   1          105d
+default       cw-proxy-2                                               1/1     Running   1          105d
+default       cw-sftp-0                                                1/1     Running   1          105d
+default       cw-sftp-1                                                1/1     Running   1          105d
+default       cw-sftp-2                                                1/1     Running   1          105d
+default       cw-swim-7bc87fb55b-9zfvd                                 1/1     Running   0          52d
+default       cw-timeseries-db-0                                       1/1     Running   1          105d
+default       cw-timeseries-db-1                                       1/1     Running   1          105d
+default       cw-topo-visualization-0                                  1/1     Running   0          5d13h
+default       cw-topo-visualization-1                                  1/1     Running   0          5d13h
+default       cw-views-service-f54c5fbc8-jghsg                         1/1     Running   1          105d
+default       dg-manager-0                                             1/1     Running   1          105d
+default       dg-manager-1                                             1/1     Running   1          105d
+default       docker-registry-965455fc-c56nx                           1/1     Running   1          105d
+default       engine-worker-0                                          1/1     Running   0          10d
+default       engine-worker-1                                          1/1     Running   0          10d
+default       engine-worker-2                                          1/1     Running   0          10d
+default       helios-0                                                 1/1     Running   1          105d
+default       helios-1                                                 1/1     Running   1          105d
+default       magellan-0                                               1/1     Running   1          105d
+default       magellan-1                                               1/1     Running   2          105d
+default       magellan-2                                               1/1     Running   1          105d
+default       nats-0                                                   1/1     Running   1          105d
+default       nats-1                                                   1/1     Running   1          105d
+default       nats-2                                                   1/1     Running   1          105d
+default       neo4j-topo-svc-0                                         1/1     Running   0          5d13h
+default       neo4j-topo-svc-1                                         1/1     Running   0          5d13h
+default       neo4j-topo-svc-2                                         1/1     Running   0          5d13h
+default       node-orchestrator-cpfrq                                  1/1     Running   1          105d
+default       node-orchestrator-gvrp8                                  1/1     Running   1          105d
+default       node-orchestrator-r5pp8                                  1/1     Running   0          52d
+default       node-orchestrator-rmrnt                                  1/1     Running   1          105d
+default       node-orchestrator-w2jxl                                  1/1     Running   1          105d
+default       nso-connector-0                                          1/1     Running   1          105d
+default       nso-connector-1                                          1/1     Running   1          105d
+default       oam-0                                                    1/1     Running   1          105d
+default       oam-1                                                    1/1     Running   1          105d
+default       optima-analytics-api-7cfd59f78b-lkl66                    1/1     Running   1          105d
+default       optima-analytics-service-797967d48d-j7nhs                1/1     Running   1          105d
+default       optima-bwod-5d7674d5f7-jcrj5                             1/1     Running   1          105d
+default       optima-bwopt-9fccf67bd-vn8tf                             1/1     Running   1          105d
+default       optima-engine-0                                          1/1     Running   0          10d
+default       optima-engine-1                                          1/1     Running   0          10d
+default       optima-lcm-797747c564-hzqjv                              1/1     Running   1          105d
+default       optima-pce-dispatcher-785b4fc769-fs75q                   1/1     Running   0          11d
+default       optima-restconf-v2-55868946b-sbbtf                       1/1     Running   1          105d
+default       optima-traffic-0                                         1/1     Running   1          105d
+default       optima-traffic-1                                         1/1     Running   1          105d
+default       optima-traffic-2                                         1/1     Running   1          105d
+default       optima-ui-service-744dc7c8f6-74b5b                       1/1     Running   0          5d13h
+default       robot-alerting-d5c57f456-fsddv                           1/1     Running   1          105d
+default       robot-dlminvmgr-0                                        1/1     Running   1          105d
+default       robot-dlminvmgr-1                                        1/1     Running   1          105d
+default       robot-etcd-0                                             1/1     Running   1          105d
+default       robot-etcd-1                                             1/1     Running   1          105d
+default       robot-etcd-2                                             1/1     Running   1          105d
+default       robot-kafka-0                                            1/1     Running   2          105d
+default       robot-kafka-1                                            1/1     Running   2          105d
+default       robot-kafka-2                                            1/1     Running   1          105d
+default       robot-postgres-0                                         1/1     Running   1          105d
+default       robot-postgres-1                                         1/1     Running   1          105d
+default       robot-postgres-2                                         1/1     Running   1          105d
+default       robot-topo-svc-0                                         1/1     Running   0          5d13h
+default       robot-topo-svc-1                                         1/1     Running   0          5d13h
+default       robot-topo-svc-2                                         1/1     Running   0          5d13h
+default       robot-ui-0                                               1/1     Running   1          105d
+default       robot-ui-1                                               1/1     Running   1          105d
+default       robot-ui-2                                               1/1     Running   1          105d
+default       robot-zookeeper-0                                        1/1     Running   1          105d
+default       robot-zookeeper-1                                        1/1     Running   1          105d
+default       robot-zookeeper-2                                        1/1     Running   1          105d
+default       tyk-0                                                    1/1     Running   1          105d
+default       tyk-1                                                    1/1     Running   1          105d
+default       tyk-2                                                    1/1     Running   2          105d
+kube-system   calico-kube-controllers-8656595cd-dkzlz                  1/1     Running   5          105d
+kube-system   calico-node-2vbqx                                        1/1     Running   1          105d
+kube-system   calico-node-df98j                                        1/1     Running   1          105d
+kube-system   calico-node-fmpb5                                        1/1     Running   0          52d
+kube-system   calico-node-lf7nb                                        1/1     Running   1          105d
+kube-system   calico-node-s7fdw                                        1/1     Running   1          105d
+kube-system   coredns-79dc5d4bf6-frjqt                                 1/1     Running   1          105d
+kube-system   coredns-79dc5d4bf6-h2n4j                                 1/1     Running   1          105d
+kube-system   coredns-79dc5d4bf6-rhqzg                                 1/1     Running   1          105d
+kube-system   etcd-10-62-157-176-hybrid.cisco.com                      1/1     Running   3          105d
+kube-system   etcd-10-62-157-178-hybrid.cisco.com                      1/1     Running   1          105d
+kube-system   etcd-10-62-157-180-hybrid.cisco.com                      1/1     Running   1          105d
+kube-system   kube-apiserver-10-62-157-176-hybrid.cisco.com            1/1     Running   2          105d
+kube-system   kube-apiserver-10-62-157-178-hybrid.cisco.com            1/1     Running   3          105d
+kube-system   kube-apiserver-10-62-157-180-hybrid.cisco.com            1/1     Running   1          105d
+kube-system   kube-controller-manager-10-62-157-176-hybrid.cisco.com   1/1     Running   2          105d
+kube-system   kube-controller-manager-10-62-157-178-hybrid.cisco.com   1/1     Running   1          105d
+kube-system   kube-controller-manager-10-62-157-180-hybrid.cisco.com   1/1     Running   1          105d
+kube-system   kube-proxy-7fsts                                         1/1     Running   2          105d
+kube-system   kube-proxy-98zpm                                         1/1     Running   1          105d
+kube-system   kube-proxy-kzmkm                                         1/1     Running   1          105d
+kube-system   kube-proxy-tbqd5                                         1/1     Running   1          52d
+kube-system   kube-proxy-xcm4z                                         1/1     Running   1          105d
+kube-system   kube-scheduler-10-62-157-176-hybrid.cisco.com            1/1     Running   2          105d
+kube-system   kube-scheduler-10-62-157-178-hybrid.cisco.com            1/1     Running   2          105d
+kube-system   kube-scheduler-10-62-157-180-hybrid.cisco.com            1/1     Running   1          105d
+kube-system   node-local-dns-6bswc                                     1/1     Running   1          52d
+kube-system   node-local-dns-6r5pj                                     1/1     Running   1          105d
+kube-system   node-local-dns-7jhwn                                     1/1     Running   1          105d
+kube-system   node-local-dns-f5ggc                                     1/1     Running   1          105d
+kube-system   node-local-dns-z6284                                     1/1     Running   1          105d
+kube-system   robot-orch-84d74f5f69-qhgfq                              1/1     Running   1          105d
+kube-system   robot-orch-84d74f5f69-sdbpx                              1/1     Running   1          105d
+kube-system   workerdns-2bk4s                                          1/1     Running   1          105d
+kube-system   workerdns-c4jph                                          1/1     Running   0          52d
+monitoring    grafana-core-854dbfdbdc-vkl5h                            1/1     Running   1          105d
+monitoring    kube-state-metrics-58766c9f95-526qd                      1/1     Running   1          105d
+monitoring    node-directory-size-metrics-7sc6b                        2/2     Running   2          105d
+monitoring    node-directory-size-metrics-chr82                        2/2     Running   2          105d
+monitoring    node-directory-size-metrics-hdltv                        2/2     Running   0          52d
+monitoring    node-directory-size-metrics-lh26c                        2/2     Running   2          105d
+monitoring    node-directory-size-metrics-mc5jn                        2/2     Running   2          105d
+monitoring    prometheus-core-7647bfc77-flgzv                          1/1     Running   1          105d
+monitoring    prometheus-node-exporter-278zg                           1/1     Running   1          105d
+monitoring    prometheus-node-exporter-drbfd                           1/1     Running   0          52d
+monitoring    prometheus-node-exporter-m5j5d                           1/1     Running   1          105d
+monitoring    prometheus-node-exporter-nfg77                           1/1     Running   1          105d
+monitoring    prometheus-node-exporter-p9kw2                           1/1     Running   1          105d
+root@10-62-157-180-hybrid:/home/cw-admin# 

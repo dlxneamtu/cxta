@@ -1,0 +1,16 @@
+
+2023-05-26 10:12:42,273: %UNICON-INFO: +++ jumphost logfile /home/cisco/cxta/device_logs/jumphost-20230526T101242264.log +++
+
+2023-05-26 10:12:42,274: %UNICON-INFO: +++ Unicon plugin linux (unicon.plugins.linux) +++
+
+2023-05-26 10:12:42,287: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140685332807296 +++
+
+2023-05-26 10:12:42,290: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Fri May 26 10:11:52 2023 from 10.209.205.222
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]
+
+2023-05-26 10:12:43,791: %UNICON-WARNING: Using the default hostname pattern ([^# \t\n\r\f\v\(\)]+). This may lead to unstable behavior.
+
+2023-05-26 10:12:43,794: %UNICON-INFO: +++ initializing handle +++

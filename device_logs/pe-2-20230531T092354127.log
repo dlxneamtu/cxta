@@ -1,0 +1,134 @@
+
+2023-05-31 09:23:54,146: %UNICON-INFO: +++ pe-2 logfile /home/cisco/cxta/device_logs/pe-2-20230531T092354127.log +++
+
+2023-05-31 09:23:54,148: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-31 09:23:54,154: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-31 09:23:54,165: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 139653182937792 +++
+
+2023-05-31 09:23:54,167: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Wed May 31 09:23:51 2023 from 10.209.208.72
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-31 09:23:55,235: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-31 09:23:55,239: %UNICON-INFO: connection to pe-2
+ssh -l cisco 17.3.11.72
+]133;C;Password: 
+Last login: Wed May 31 09:15:13 2023 from 17.3.11.162
+
+
+
+RP/0/RP0/CPU0:pe-2#
+
+2023-05-31 09:23:55,713: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-31 09:23:56,042: %UNICON-INFO: +++ pe-2 with via 'cli': executing command 'term length 0' +++
+term length 0
+Wed May 31 09:21:50.478 UTC
+RP/0/RP0/CPU0:pe-2#
+
+2023-05-31 09:23:56,611: %UNICON-INFO: +++ pe-2 with via 'cli': executing command 'term width 0' +++
+term width 0
+Wed May 31 09:21:51.046 UTC
+RP/0/RP0/CPU0:pe-2#
+
+2023-05-31 09:23:57,183: %UNICON-INFO: +++ pe-2 with via 'cli': executing command 'show version' +++
+show version
+Wed May 31 09:21:51.619 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+pe-2 uptime is 2 weeks, 3 days, 12 hours, 34 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:pe-2#
+
+2023-05-31 09:24:36,780: %UNICON-INFO: +++ pe-2 with via 'cli': executing command 'show isis neighbors Gi0/0/0/0' +++
+show isis neighbors Gi0/0/0/0
+Wed May 31 09:22:31.234 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+npe-2          Gi0/0/0/0        *PtoP*         Up    29       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:pe-2#
+
+2023-05-31 09:24:37,616: %UNICON-INFO: +++ pe-2 with via 'cli': executing command 'show isis neighbors Gi0/0/0/1' +++
+show isis neighbors Gi0/0/0/1
+Wed May 31 09:22:32.052 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+pe-1           Gi0/0/0/1        *PtoP*         Up    23       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:pe-2#
+
+2023-05-31 09:24:38,435: %UNICON-INFO: +++ pe-2 with via 'cli': executing command 'show isis neighbors Gi0/0/0/2' +++
+show isis neighbors Gi0/0/0/2
+Wed May 31 09:22:32.861 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+pe-4           Gi0/0/0/2        *PtoP*         Up    25       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:pe-2#
+
+2023-05-31 09:24:39,213: %UNICON-INFO: +++ pe-2 with via 'cli': executing command 'show isis neighbors Gi0/0/0/3' +++
+show isis neighbors Gi0/0/0/3
+Wed May 31 09:22:33.633 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+p-1            Gi0/0/0/3        *PtoP*         Up    29       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:pe-2#
+
+2023-05-31 09:25:01,870: %UNICON-INFO: +++ pe-2 with via 'cli': executing command 'show bgp ipv4 unicast summary' +++
+show bgp ipv4 unicast summary
+Wed May 31 09:22:56.320 UTC
+BGP router identifier 1.1.1.72, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 84
+BGP table nexthop route policy: 
+BGP main routing table version 84
+BGP NSR Initial initsync version 4 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker              84         84         84         84          84           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.87          0 21183   25299   25237       84    0    0     2w3d         15
+1.1.1.88          0 21183       0       0        0    0    0 00:00:00 Idle
+
+RP/0/RP0/CPU0:pe-2#
+
+2023-05-31 09:25:30,116: %UNICON-INFO: +++ pe-2 with via 'cli': executing command 'show segment-routing traffic-eng pcc ipv4 peer brief' +++
+show segment-routing traffic-eng pcc ipv4 peer brief
+Wed May 31 09:23:24.548 UTC
+
+RP/0/RP0/CPU0:pe-2#

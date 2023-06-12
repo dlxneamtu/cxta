@@ -1,0 +1,72 @@
+
+2023-05-27 11:08:02,465: %UNICON-INFO: +++ nso-576 logfile /home/cisco/cxta/device_logs/nso-576-20230527T110802453.log +++
+
+2023-05-27 11:08:02,466: %UNICON-INFO: +++ Unicon plugin nso (unicon.plugins.nso) +++
+Warning: Permanently added '[10.62.157.181]:2024' (ED25519) to the list of known hosts.
+
+
+2023-05-27 11:08:02,882: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.181 -p 2024, id: 140378294131104 +++
+
+2023-05-27 11:08:02,884: %UNICON-INFO: connection to nso-576
+cloud-user@10.62.157.181's password: 
+
+User cloud-user last logged in 2023-05-27T11:04:51.642876+00:00, to nso-576, from 10.209.205.222 using cli-ssh
+cloud-user connected from 10.209.205.222 using ssh on nso-576
+[?7hcloud-user@ncs> 
+
+2023-05-27 11:08:03,560: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-27 11:08:03,741: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'set screen length 0' +++
+set screen length 0
+[ok][2023-05-27 11:05:46]
+cloud-user@ncs> 
+
+2023-05-27 11:08:04,009: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'set screen width 0' +++
+set screen width 0
+[ok][2023-05-27 11:05:47]
+cloud-user@ncs> 
+
+2023-05-27 11:08:04,218: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'set idle-timeout 0' +++
+set idle-timeout 0
+[ok][2023-05-27 11:05:47]
+cloud-user@ncs> 
+
+2023-05-27 11:08:05,076: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'switch cli' +++
+switch cli
+cloud-user@ncs# 
+
+2023-05-27 11:08:08,274: %UNICON-INFO: +++ nso-576 with via 'cli': cli_style +++
+switch cli
+[ok][2023-05-27 11:05:51]
+cloud-user@ncs> 
+
+2023-05-27 11:08:08,764: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'devices fetch-ssh-host-keys' +++
+devices fetch-ssh-host-keys
+----------------^
+syntax error: expecting 
+  clear          - Clear parameter
+  compare        - Compare running configuration to another configuration or a file
+  configure      - Manipulate software configuration information
+  describe       - Display transparent command  information
+  exit           - Exit the management session
+  file           - Perform file operations
+  help           - Provide help information
+  id             - Show user id information
+  leaf-prompting - Automatically query for leaf values
+  monitor        - Real-time debugging
+  ping           - Ping a host
+  ping6          - Ping an ipv6 host
+  quit           - Exit the management session
+  request        - Make system-level requests
+  script         - Script actions
+  set            - Set CLI properties
+  set-path       - Set relative show path
+  show           - Show information about the system
+  source         - File to source
+  switch         - Change CLI style
+  templatize     - Find patterns in subtree.
+  top            - Exit to top level and optionally run command
+  traceroute     - Trace the route to a remote host
+  up             - Exit one level of configuration
+[error][2023-05-27 11:05:51]
+cloud-user@ncs> 

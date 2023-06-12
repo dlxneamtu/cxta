@@ -1,0 +1,114 @@
+
+2023-05-25 13:24:05,448: %UNICON-INFO: +++ npe-2 logfile /home/cisco/cxta/device_logs/npe-2-20230525T132405436.log +++
+
+2023-05-25 13:24:05,451: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-25 13:24:05,454: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-25 13:24:05,463: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 139835235380096 +++
+
+2023-05-25 13:24:05,466: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Thu May 25 13:24:02 2023 from 10.209.205.222
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-25 13:24:06,687: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-25 13:24:06,692: %UNICON-INFO: connection to npe-2
+ssh -l cisco 17.3.11.62
+]133;C;Password: 
+Last login: Thu May 25 13:15:16 2023 from 17.3.11.162
+
+
+
+RP/0/RP0/CPU0:npe-2#
+
+2023-05-25 13:24:07,208: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-25 13:24:07,531: %UNICON-INFO: +++ npe-2 with via 'cli': executing command 'term length 0' +++
+term length 0
+Thu May 25 13:22:04.712 UTC
+RP/0/RP0/CPU0:npe-2#
+
+2023-05-25 13:24:08,168: %UNICON-INFO: +++ npe-2 with via 'cli': executing command 'term width 0' +++
+term width 0
+Thu May 25 13:22:05.365 UTC
+RP/0/RP0/CPU0:npe-2#
+
+2023-05-25 13:24:08,839: %UNICON-INFO: +++ npe-2 with via 'cli': executing command 'show version' +++
+show version
+Thu May 25 13:22:05.959 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+npe-2 uptime is 1 week, 4 days, 5 hours, 51 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:npe-2#
+
+2023-05-25 13:24:41,215: %UNICON-INFO: +++ npe-2 with via 'cli': executing command 'show bgp ipv4 unicast summary' +++
+show bgp ipv4 unicast summary
+Thu May 25 13:22:38.396 UTC
+BGP router identifier 1.1.1.61, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 27
+BGP table nexthop route policy: 
+BGP main routing table version 27
+BGP NSR Initial initsync version 26 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker              27         27         27         27          27           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.51          0 21183   16196   16210       27    0    0     1w4d          0
+1.1.1.52          0 21183   16196   16210       27    0    0     1w4d          0
+1.1.1.87          0 21183   16230   16239       27    0    0     1w4d          6
+1.1.1.88          0 21183       0       0        0    0    0 00:00:00 Idle
+
+RP/0/RP0/CPU0:npe-2#
+
+2023-05-25 13:24:42,181: %UNICON-INFO: +++ npe-2 with via 'cli': executing command 'show bgp ipv4 unicast summary' +++
+show bgp ipv4 unicast summary
+Thu May 25 13:22:39.310 UTC
+BGP router identifier 1.1.1.61, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 27
+BGP table nexthop route policy: 
+BGP main routing table version 27
+BGP NSR Initial initsync version 26 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker              27         27         27         27          27           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.51          0 21183   16196   16210       27    0    0     1w4d          0
+1.1.1.52          0 21183   16196   16210       27    0    0     1w4d          0
+1.1.1.87          0 21183   16230   16239       27    0    0     1w4d          6
+1.1.1.88          0 21183       0       0        0    0    0 00:00:00 Idle
+
+RP/0/RP0/CPU0:npe-2#

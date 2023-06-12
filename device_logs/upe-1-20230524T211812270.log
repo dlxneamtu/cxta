@@ -1,0 +1,40 @@
+
+2023-05-24 21:18:12,287: %UNICON-INFO: +++ upe-1 logfile /home/cisco/cxta/device_logs/upe-1-20230524T211812270.log +++
+
+2023-05-24 21:18:12,288: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-24 21:18:12,291: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-24 21:18:12,300: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140094008485968 +++
+
+2023-05-24 21:18:12,302: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Wed May 24 21:17:27 2023 from 10.209.205.222
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-24 21:18:13,348: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-24 21:18:13,354: %UNICON-INFO: connection to upe-1
+ssh -l cisco 17.3.11.51
+]133;C;Connection closed by 17.3.11.51 port 22
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;255]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-24 21:19:15,003: %UNICON-WARNING: +++ Reconnecting +++
+
+2023-05-24 21:19:15,005: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-24 21:19:15,013: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140094008662720 +++
+
+2023-05-24 21:19:15,015: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Wed May 24 21:18:13 2023 from 10.209.205.222
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-24 21:19:15,944: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-24 21:19:15,947: %UNICON-INFO: connection to upe-1
+ssh -l cisco 17.3.11.51
+]133;C;Connection closed by 17.3.11.51 port 22
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;255]133;Acloud-user@smi-deployer:~$ ]133;B

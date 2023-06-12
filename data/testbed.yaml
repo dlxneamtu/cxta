@@ -1,0 +1,222 @@
+devices:
+  jumphost:
+    os: linux
+    type: server
+    credentials:
+      default:
+        username: cloud-user
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 10.62.157.163
+
+  upe-1:
+    type: router
+    os: ios-xr
+    credentials:
+      default:
+        username: cisco
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 17.3.11.51
+        proxy: jumphost
+
+  upe-2:
+    type: router
+    os: ios-xr
+    credentials:
+      default:
+        username: cisco
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 17.3.11.52
+        proxy: jumphost
+
+  upe-3:
+    type: router
+    os: ios-xr
+    credentials:
+      default:
+        username: cisco
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 17.3.11.53
+        proxy: jumphost
+
+  upe-4:
+    type: router
+    os: ios-xr
+    credentials:
+      default:
+        username: cisco
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 17.3.11.54
+        proxy: jumphost
+
+  npe-1:
+    type: router
+    os: ios-xr
+    credentials:
+      default:
+        username: cisco
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 17.3.11.61
+        proxy: jumphost
+
+  npe-2:
+    type: router
+    os: ios-xr
+    credentials:
+      default:
+        username: cisco
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 17.3.11.62
+        proxy: jumphost
+
+  npe-3:
+    type: router
+    os: ios-xr
+    credentials:
+      default:
+        username: cisco
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 17.3.11.63
+        proxy: jumphost
+
+  npe-4:
+    type: router
+    os: ios-xr
+    credentials:
+      default:
+        username: cisco
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 17.3.11.64
+        proxy: jumphost
+      
+  pe-1:
+    type: router
+    os: ios-xr
+    credentials:
+      default:
+        username: cisco
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 17.3.11.71
+        proxy: jumphost
+
+  pe-2:
+    type: router
+    os: ios-xr
+    credentials:
+      default:
+        username: cisco
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 17.3.11.72
+        proxy: jumphost
+
+  pe-3:
+    type: router
+    os: ios-xr
+    credentials:
+      default:
+        username: cisco
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 17.3.11.73
+        proxy: jumphost
+
+  pe-4:
+    type: router
+    os: ios-xr
+    credentials:
+      default:
+        username: cisco
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 17.3.11.74
+        proxy: jumphost
+
+  sr-pce-1:
+    type: router
+    os: ios-xr
+    credentials:
+      default:
+        username: admin
+        password: L1ons@svs
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      cli:
+        protocol: ssh
+        ip: 10.62.157.167

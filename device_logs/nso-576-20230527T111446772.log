@@ -1,0 +1,234 @@
+
+2023-05-27 11:14:46,783: %UNICON-INFO: +++ nso-576 logfile /home/cisco/cxta/device_logs/nso-576-20230527T111446772.log +++
+
+2023-05-27 11:14:46,784: %UNICON-INFO: +++ Unicon plugin nso (unicon.plugins.nso) +++
+Warning: Permanently added '[10.62.157.181]:2024' (ED25519) to the list of known hosts.
+
+
+2023-05-27 11:14:47,253: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.181 -p 2024, id: 140507864574560 +++
+
+2023-05-27 11:14:47,256: %UNICON-INFO: connection to nso-576
+cloud-user@10.62.157.181's password: 
+
+User cloud-user last logged in 2023-05-27T11:12:14.363782+00:00, to nso-576, from 10.209.205.222 using cli-ssh
+cloud-user connected from 10.209.205.222 using ssh on nso-576
+[?7hcloud-user@ncs# 
+
+2023-05-27 11:14:48,131: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-27 11:14:48,303: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'screen-length 0' +++
+screen-length 0
+cloud-user@ncs# 
+
+2023-05-27 11:14:48,557: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'screen-width 0' +++
+screen-width 0
+cloud-user@ncs# 
+
+2023-05-27 11:14:48,695: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'idle-timeout 0' +++
+idle-timeout 0
+cloud-user@ncs# 
+
+2023-05-27 11:14:49,590: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'switch cli' +++
+switch cli
+[ok][2023-05-27 11:12:32]
+cloud-user@ncs> 
+
+2023-05-27 11:14:52,915: %UNICON-INFO: +++ nso-576 with via 'cli': cli_style +++
+switch cli
+cloud-user@ncs# 
+
+2023-05-27 11:14:53,363: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'devices fetch-ssh-host-keys' +++
+devices fetch-ssh-host-keys
+fetch-result {
+    device ansible-1
+    result failed
+    info Failed to connect to device ansible-1: host is unreachable
+}
+fetch-result {
+    device ansible-2
+    result failed
+    info Failed to connect to device ansible-2: host is unreachable
+}
+fetch-result {
+    device npe-1
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value e1:e3:af:04:c4:09:8c:66:c9:0f:81:4b:f7:60:47:11
+    }
+}
+fetch-result {
+    device npe-2
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value d2:1b:8e:6b:42:5b:09:44:00:88:8d:6a:8f:65:58:6e
+    }
+}
+fetch-result {
+    device npe-3
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value 24:ef:37:0b:80:8d:2e:e6:d5:a7:18:62:f1:30:c8:c0
+    }
+}
+fetch-result {
+    device npe-4
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value c0:77:b9:9c:45:85:53:90:29:90:21:aa:1b:a6:7e:dc
+    }
+}
+fetch-result {
+    device p-1
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value 91:fa:7b:9c:d2:8c:58:4e:01:75:17:33:13:1f:fe:53
+    }
+}
+fetch-result {
+    device pe-1
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value 2e:45:f3:4e:0f:4d:12:92:a4:3a:38:61:b1:ed:4e:54
+    }
+}
+fetch-result {
+    device pe-2
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value 77:c4:93:0a:0e:7a:c6:68:66:57:f3:8d:42:1d:35:43
+    }
+}
+fetch-result {
+    device pe-3
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value f7:37:ba:7c:fc:46:dd:89:46:26:d9:e9:33:7e:26:6a
+    }
+}
+fetch-result {
+    device pe-4
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value 31:26:68:d5:16:a4:a4:08:b7:47:c5:de:71:e1:8d:70
+    }
+}
+fetch-result {
+    device rr-1
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value b7:00:1a:8d:98:94:db:9c:25:b3:fc:9c:ce:10:99:f1
+    }
+}
+fetch-result {
+    device upe-1
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value 98:f7:45:12:dc:cb:51:e3:10:0f:4a:e1:74:18:0b:7f
+    }
+}
+fetch-result {
+    device upe-2
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value 24:42:bd:c9:ba:77:9e:44:8a:b8:0e:62:0b:60:22:e7
+    }
+}
+fetch-result {
+    device upe-3
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value ba:88:da:38:7d:a7:40:3a:f9:e7:5e:06:db:9e:fa:72
+    }
+}
+fetch-result {
+    device upe-4
+    result unchanged
+    fingerprint {
+        algorithm ssh-ed25519
+        value d3:0a:1c:75:4a:b3:5c:3f:bc:35:1b:a7:bc:b4:59:7d
+    }
+}
+cloud-user@ncs# 
+
+2023-05-27 11:14:57,024: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'devices check-sync' +++
+devices check-sync
+sync-result {
+    device ansible-1
+    result error
+    info Failed to connect to device ansible-1: connection refused: NEDCOM CONNECT: No route to host (Host unreachable) in new state
+}
+sync-result {
+    device ansible-2
+    result error
+    info Failed to connect to device ansible-2: connection refused: NEDCOM CONNECT: No route to host (Host unreachable) in new state
+}
+sync-result {
+    device npe-1
+    result in-sync
+}
+sync-result {
+    device npe-2
+    result in-sync
+}
+sync-result {
+    device npe-3
+    result in-sync
+}
+sync-result {
+    device npe-4
+    result in-sync
+}
+sync-result {
+    device p-1
+    result in-sync
+}
+sync-result {
+    device pe-1
+    result in-sync
+}
+sync-result {
+    device pe-2
+    result in-sync
+}
+sync-result {
+    device pe-3
+    result in-sync
+}
+sync-result {
+    device pe-4
+    result in-sync
+}
+sync-result {
+    device rr-1
+    result in-sync
+}
+sync-result {
+    device upe-1
+    result in-sync
+}
+sync-result {
+    device upe-2
+    result in-sync
+}
+sync-result {
+    device upe-3
+    result in-sync
+}
+sync-result {
+    device upe-4
+    result in-sync
+}
+cloud-user@ncs# 

@@ -1,0 +1,17 @@
+cnc: cnc-4
+cnc_ip: 10.62.157.175
+cnc_port: 30603
+sudo_password: L1ons@svs
+rest_user: admin
+rest_password: L1ons@svs
+ticket1_data: 
+  username: admin
+  password: L1ons@svs
+ticket2_data: 
+  service: https://10.62.157.175:30603/app-dashboard
+
+pce: sr-pce-1
+pce_ip: 10.62.157.167
+pce_port: 8080
+rest_pce_user: cisco
+rest_pce_password: cisco

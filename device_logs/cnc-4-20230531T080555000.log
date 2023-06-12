@@ -1,0 +1,34 @@
+
+2023-05-31 08:05:55,009: %UNICON-INFO: +++ cnc-4 logfile /home/cisco/cxta/device_logs/cnc-4-20230531T080555000.log +++
+
+2023-05-31 08:05:55,010: %UNICON-INFO: +++ Unicon plugin linux (unicon.plugins.linux) +++
+
+2023-05-31 08:05:55,023: %UNICON-INFO: +++ connection to spawn: ssh -l cw-admin 10.62.157.175, id: 139647993463328 +++
+
+2023-05-31 08:05:55,026: %UNICON-INFO: connection to cnc-4
+Warning: Permanently added '10.62.157.175' (ECDSA) to the list of known hosts.
+(cw-admin@10.62.157.175) Password: 
+Last login: Wed May 31 08:05:21 2023 from 10.209.208.72
+Cisco Crosswork
+
+  #####  ######  #######  #####   #####  #     # ####### ######  #    #
+ #     # #     # #     # #     # #     # #  #  # #     # #     # #   #
+ #       #     # #     # #       #       #  #  # #     # #     # #  #
+ #       ######  #     #  #####   #####  #  #  # #     # ######  ###
+ #       #   #   #     #       #       # #  #  # #     # #   #   #  #
+ #     # #    #  #     # #     # #     # #  #  # #     # #    #  #   #
+  #####  #     # #######  #####   #####   ## ##  ####### #     # #    #
+
+
+
+Copyright (c) 2022 by Cisco Systems, Inc.
+Version: release-4.4.0 (Build 250)
+Built on: Oct-27-2022 08:49 AM UTC
+
+cw-admin@10-62-157-180-hybrid:~$ 
+
+2023-05-31 08:05:56,502: %UNICON-INFO: Learned hostname: 10-62-157-180-hybrid
+
+cw-admin@10-62-157-180-hybrid:~$ 
+
+2023-05-31 08:05:56,599: %UNICON-INFO: +++ initializing handle +++

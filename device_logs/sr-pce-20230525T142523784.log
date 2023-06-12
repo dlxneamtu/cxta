@@ -1,0 +1,10 @@
+
+2023-05-25 14:25:23,795: %UNICON-INFO: +++ sr-pce logfile /home/cisco/cxta/device_logs/sr-pce-20230525T142523784.log +++
+
+2023-05-25 14:25:23,799: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-25 14:25:35,835: %UNICON-INFO: +++ connection to spawn: ssh -l cisco 190.62.157.167, id: 140110319650176 +++
+
+2023-05-25 14:25:35,837: %UNICON-INFO: connection to sr-pce
+
+

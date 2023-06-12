@@ -1,0 +1,29 @@
+
+2023-05-31 09:24:08,509: %UNICON-INFO: +++ nso-576 logfile /home/cisco/cxta/device_logs/nso-576-20230531T092408496.log +++
+
+2023-05-31 09:24:08,511: %UNICON-INFO: +++ Unicon plugin nso (unicon.plugins.nso) +++
+Warning: Permanently added '[10.62.157.181]:2024' (ED25519) to the list of known hosts.
+
+
+2023-05-31 09:24:08,853: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.181 -p 2024, id: 139653182560672 +++
+
+2023-05-31 09:24:08,861: %UNICON-INFO: connection to nso-576
+cloud-user@10.62.157.181's password: 
+
+User cloud-user last logged in 2023-05-29T20:59:32.482024+00:00, to nso-576, from 10.209.208.72 using cli-ssh
+cloud-user connected from 10.209.208.72 using ssh on nso-576
+[?7hcloud-user@ncs# 
+
+2023-05-31 09:24:09,407: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-31 09:24:09,584: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'screen-length 0' +++
+screen-length 0
+cloud-user@ncs# 
+
+2023-05-31 09:24:09,782: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'screen-width 0' +++
+screen-width 0
+cloud-user@ncs# 
+
+2023-05-31 09:24:09,909: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'idle-timeout 0' +++
+idle-timeout 0
+cloud-user@ncs# 

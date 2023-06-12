@@ -1,0 +1,373 @@
+
+2023-05-28 12:12:17,930: %UNICON-INFO: +++ upe-1 logfile /home/cisco/cxta/device_logs/upe-1-20230528T121217903.log +++
+
+2023-05-28 12:12:17,931: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-28 12:12:17,934: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-28 12:12:17,944: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140346605644096 +++
+
+2023-05-28 12:12:17,946: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Sun May 28 10:13:42 2023 from 10.209.218.74
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-28 12:12:18,982: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-28 12:12:18,986: %UNICON-INFO: connection to upe-1
+ssh -l cisco 17.3.11.51
+]133;C;Password: 
+Last login: Sun May 28 12:10:08 2023 from 17.3.11.162
+
+
+
+RP/0/RP0/CPU0:upe-1#
+
+2023-05-28 12:12:19,501: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-28 12:12:19,840: %UNICON-INFO: +++ upe-1 with via 'cli': executing command 'term length 0' +++
+term length 0
+Sun May 28 12:10:11.295 UTC
+RP/0/RP0/CPU0:upe-1#
+
+2023-05-28 12:12:20,402: %UNICON-INFO: +++ upe-1 with via 'cli': executing command 'term width 0' +++
+term width 0
+Sun May 28 12:10:11.852 UTC
+RP/0/RP0/CPU0:upe-1#
+
+2023-05-28 12:12:21,060: %UNICON-INFO: +++ upe-1 with via 'cli': executing command 'show version' +++
+show version
+Sun May 28 12:10:12.507 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+upe-1 uptime is 2 weeks, 4 hours, 40 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:upe-1#
+
+2023-05-28 12:12:22,225: %UNICON-INFO: +++ upe-1 with via 'cli': executing command 'show running-config' +++
+show running-config
+Sun May 28 12:10:13.671 UTC
+!! Building configuration...
+!! IOS XR Configuration 7.11.1.12I
+!! Last configuration change at Fri May 26 21:03:56 2023 by cisco
+!
+hostname upe-1
+logging trap warning
+logging console debugging
+logging monitor debugging
+logging 17.3.11.251 vrf default severity warning port 9514
+username cisco
+ group root-lr
+ group cisco-support
+ password 7 030752180500701E1D
+!
+cdp
+grpc
+ port 57400
+ no-tls
+ listen-addresses 17.3.11.51
+!
+vrf 100
+ address-family ipv4 unicast
+  import route-policy vpnv4
+  import route-target
+   100:100
+  !
+  export route-policy vpnv4
+  export route-target
+   100:100
+  !
+ !
+!
+vrf 200
+ address-family ipv4 unicast
+  import route-target
+   200:200
+  !
+  export route-target
+   200:200
+  !
+ !
+!
+vrf GREEN
+ address-family ipv4 unicast
+  import route-target
+   300:300
+  !
+  export route-policy SET_COLORv4_vpnv4_cnc
+  export route-target
+   300:300
+  !
+ !
+!
+vrf ORANGE
+ address-family ipv4 unicast
+  import route-target
+   310:310
+  !
+  export route-policy SET_COLORv4_Orange_VPN_RP
+  export route-target
+   310:310
+  !
+ !
+!
+snmp-server ifindex persist
+snmp-server host 17.3.11.251 traps version 2c public udp-port 1062
+snmp-server community public RO
+snmp-server community robot-demo2 RO
+alias exec xrd sh run | file disk0:/upe-1-startup.cfg
+alias exec bgpvpn show bgp vpnv4 unicast
+netconf-yang agent
+ ssh
+!
+interface Loopback0
+ description {0} Python Generated Description
+ ipv4 address 1.1.1.51 255.255.255.255
+!
+interface Loopback101
+ ipv4 address 172.16.100.51 255.255.255.255
+!
+interface Loopback150
+ description {150} Python Generated Description
+ ipv4 address 15.15.15.15 255.255.255.255
+!
+interface Loopback301
+ ipv4 address 172.16.113.51 255.255.255.255
+!
+interface MgmtEth0/RP0/CPU0/0
+ ipv4 address 17.3.11.51 255.255.255.0
+!
+interface GigabitEthernet0/0/0/0
+ description T-SDN Interface
+ cdp
+!
+interface GigabitEthernet0/0/0/0.300
+ description T-SDN Interface
+ vrf GREEN
+ ipv4 address 10.30.11.51 255.255.255.0
+ encapsulation dot1q 300
+!
+interface GigabitEthernet0/0/0/0.310
+ description T-SDN Interface
+ vrf ORANGE
+ ipv4 address 10.31.11.51 255.255.255.0
+ encapsulation dot1q 310
+!
+interface GigabitEthernet0/0/0/1
+ cdp
+ ipv4 address 192.168.3.51 255.255.255.0
+!
+interface GigabitEthernet0/0/0/2
+ cdp
+ ipv4 address 192.168.5.51 255.255.255.0
+!
+interface GigabitEthernet0/0/0/3
+ cdp
+ ipv4 address 192.168.6.51 255.255.255.0
+!
+extcommunity-set opaque BLUE
+  1001
+end-set
+!
+extcommunity-set opaque COLOR_310
+  310
+end-set
+!
+extcommunity-set opaque COLOR_1003
+  1003
+end-set
+!
+prefix-set prefix_BLUE
+  10.1.1.0/24 ge 24,
+  172.16.100.51/32 ge 32
+end-set
+!
+route-policy vpnv4
+  if destination in prefix_BLUE then
+    set extcommunity color BLUE
+  endif
+end-policy
+!
+route-policy SET_COLORv4_vpnv4_cnc
+  if destination in (10.30.11.0/24, 10.30.33.0/24, 172.16.0.0/16, 172.16.103.51/32, 172.16.103.53/32, 192.168.1.0/24, 192.168.11.0/24) then
+    set extcommunity color COLOR_1003
+  endif
+end-policy
+!
+route-policy SET_COLORv4_Orange_VPN_RP
+  if destination in (10.31.11.0/24, 10.31.33.0/24) then
+    set extcommunity color COLOR_310
+  endif
+end-policy
+!
+router static
+ address-family ipv4 unicast
+  0.0.0.0/0 1.1.1.61
+ !
+ vrf 100
+  address-family ipv4 unicast
+   10.1.1.0/24 192.168.1.41
+   172.16.100.51/32 Null0
+  !
+ !
+ vrf GREEN
+  address-family ipv4 unicast
+   172.16.103.51/32 Null0
+   172.16.113.51/32 Null0
+  !
+ !
+!
+router isis ACCESS
+ is-type level-2-only
+ net 49.0021.0010.0100.1051.00
+ address-family ipv4 unicast
+  metric-style wide
+  advertise passive-only
+  mpls traffic-eng level-2-only
+  mpls traffic-eng router-id Loopback0
+  segment-routing mpls sr-prefer
+  mpls ldp auto-config
+ !
+ interface Loopback0
+  passive
+  circuit-type level-2-only
+  address-family ipv4 unicast
+   prefix-sid absolute 16051
+   prefix-sid strict-spf absolute 24051
+  !
+ !
+ interface GigabitEthernet0/0/0/2
+  circuit-type level-2-only
+  point-to-point
+  address-family ipv4 unicast
+  !
+ !
+ interface GigabitEthernet0/0/0/3
+  circuit-type level-2-only
+  point-to-point
+  address-family ipv4 unicast
+  !
+ !
+!
+router bgp 21183
+ bgp router-id 1.1.1.51
+ address-family ipv4 unicast
+ !
+ address-family vpnv4 unicast
+ !
+ neighbor-group RR
+  remote-as 21183
+  update-source Loopback0
+  address-family vpnv4 unicast
+   next-hop-self
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor-group RR-NPE
+  remote-as 21183
+  update-source Loopback0
+  address-family ipv4 unicast
+   next-hop-self
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 1.1.1.61
+  use neighbor-group RR-NPE
+ !
+ neighbor 1.1.1.62
+  use neighbor-group RR-NPE
+ !
+ neighbor 1.1.1.87
+  use neighbor-group RR
+ !
+ vrf 100
+  rd 100.100.100.101:100
+  address-family ipv4 unicast
+   redistribute static
+  !
+ !
+ vrf 200
+  rd 100.100.100.102:200
+  address-family ipv4 unicast
+   redistribute static
+  !
+ !
+ vrf GREEN
+  rd 21183:300
+  address-family ipv4 unicast
+   redistribute connected
+  !
+ !
+ vrf ORANGE
+  rd 21183:310
+  address-family ipv4 unicast
+   redistribute connected
+  !
+ !
+!
+mpls oam
+!
+mpls traffic-eng
+!
+mpls ldp
+!
+segment-routing
+ global-block 16000 23999
+ local-block 15000 15999
+ traffic-eng
+  on-demand color 310
+   dynamic
+    pcep
+    !
+    metric
+     type te
+    !
+   !
+  !
+  on-demand color 1001
+   dynamic
+    pcep
+    !
+   !
+  !
+  on-demand color 1003
+   dynamic
+    pcep
+    !
+    metric
+     type latency
+    !
+   !
+  !
+  pcc
+   source-address ipv4 1.1.1.51
+   pce address ipv4 1.1.1.167
+   !
+   report-all
+  !
+ !
+!
+netconf agent tty
+!
+mpls label range table 0 30000 1048575
+ssh server logging
+ssh server rate-limit 100
+ssh server session-limit 100
+ssh server vrf default
+ssh server netconf vrf default
+end
+
+RP/0/RP0/CPU0:upe-1#

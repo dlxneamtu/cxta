@@ -1,0 +1,21 @@
+
+2023-05-26 10:17:32,257: %UNICON-INFO: +++ upe-1 logfile /home/cisco/cxta/device_logs/upe-1-20230526T101732246.log +++
+
+2023-05-26 10:17:32,258: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-26 10:17:32,260: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-26 10:17:32,271: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 139962394753680 +++
+
+2023-05-26 10:17:32,273: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Fri May 26 10:16:50 2023 from 10.209.205.222
+]
+
+2023-05-26 10:17:33,757: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-26 10:17:33,764: %UNICON-INFO: connection to upe-1
+1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;Bssh -l cisco 17.3.11.51
+]133;C;Connection closed by 17.3.11.51 port 22
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;255]133;Acloud-user@smi-deployer:~$ ]133;B

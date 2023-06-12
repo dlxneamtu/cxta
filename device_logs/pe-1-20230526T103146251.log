@@ -1,0 +1,102 @@
+
+2023-05-26 10:31:46,263: %UNICON-INFO: +++ pe-1 logfile /home/cisco/cxta/device_logs/pe-1-20230526T103146251.log +++
+
+2023-05-26 10:31:46,264: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-26 10:31:46,269: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-26 10:31:46,279: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140517280459984 +++
+
+2023-05-26 10:31:46,282: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Fri May 26 10:31:43 2023 from 10.209.205.222
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-26 10:31:47,975: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-26 10:31:47,980: %UNICON-INFO: connection to pe-1
+ssh -l cisco 17.3.11.71
+]133;C;Password: 
+Last login: Fri May 26 10:25:14 2023 from 17.3.11.162
+
+
+
+RP/0/RP0/CPU0:pe-1#
+
+2023-05-26 10:31:48,712: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-26 10:31:49,053: %UNICON-INFO: +++ pe-1 with via 'cli': executing command 'term length 0' +++
+term length 0
+Fri May 26 10:29:49.087 UTC
+RP/0/RP0/CPU0:pe-1#
+
+2023-05-26 10:31:49,646: %UNICON-INFO: +++ pe-1 with via 'cli': executing command 'term width 0' +++
+term width 0
+Fri May 26 10:29:49.734 UTC
+RP/0/RP0/CPU0:pe-1#
+
+2023-05-26 10:31:50,318: %UNICON-INFO: +++ pe-1 with via 'cli': executing command 'show version' +++
+show version
+Fri May 26 10:29:50.392 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+pe-1 uptime is 1 week, 5 days, 13 hours, 42 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:pe-1#
+
+2023-05-26 10:32:29,624: %UNICON-INFO: +++ pe-1 with via 'cli': executing command 'show isis neighbors Gi0/0/0/0' +++
+show isis neighbors Gi0/0/0/0
+Fri May 26 10:30:29.799 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+npe-1          Gi0/0/0/0        *PtoP*         Up    26       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:pe-1#
+
+2023-05-26 10:32:30,440: %UNICON-INFO: +++ pe-1 with via 'cli': executing command 'show isis neighbors Gi0/0/0/1' +++
+show isis neighbors Gi0/0/0/1
+Fri May 26 10:30:30.638 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+pe-2           Gi0/0/0/1        *PtoP*         Up    29       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:pe-1#
+
+2023-05-26 10:32:31,258: %UNICON-INFO: +++ pe-1 with via 'cli': executing command 'show isis neighbors Gi0/0/0/2' +++
+show isis neighbors Gi0/0/0/2
+Fri May 26 10:30:31.438 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+pe-3           Gi0/0/0/2        *PtoP*         Up    27       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:pe-1#
+
+2023-05-26 10:32:32,109: %UNICON-INFO: +++ pe-1 with via 'cli': executing command 'show isis neighbors Gi0/0/0/3' +++
+show isis neighbors Gi0/0/0/3
+Fri May 26 10:30:32.279 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+p-1            Gi0/0/0/3        *PtoP*         Up    23       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:pe-1#

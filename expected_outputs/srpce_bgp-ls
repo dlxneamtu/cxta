@@ -1,0 +1,30 @@
+RP/0/RP0/CPU0:sr-pce-1#sho bgp link-state link-state neighbors br
+Thu May 25 08:13:03.841 UTC
+
+Neighbor        Spk    AS Description                          Up/Down  NBRState
+1.1.1.87          0 21183                                          1w4d Established
+
+--------
+
+RP/0/RP0/CPU0:sr-pce-1#sho bgp link-state link-state summ
+Thu May 25 08:13:27.265 UTC
+BGP router identifier 1.1.1.167, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0x0   RD version: 6110
+BGP main routing table version 6110
+BGP NSR Initial initsync version 1 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker            6110       6110       6110       6110        6110           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.87          0 21183   51935   49017     6110    0    0     1w4d         98
+
+RP/0/RP0/CPU0:sr-pce-1#

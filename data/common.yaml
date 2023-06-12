@@ -1,0 +1,244 @@
+TB_YAML: data/topology.yaml
+
+ALL_DUTS:  
+  - upe-1  
+  - upe-2  
+  - upe-3  
+  - upe-4  
+  - npe-1  
+  - npe-2  
+  - npe-3  
+  - npe-4  
+  - pe-1  
+  - pe-2  
+  - pe-3  
+  - pe-4
+ALL_ISIS_DUTS:  
+  - upe-1 
+  - upe-2 
+  - upe-3 
+  - upe-4 
+  - npe-1 
+  - npe-2 
+  - npe-3 
+  - npe-4 
+  - pe-1  
+  - pe-2  
+  - pe-3  
+  - pe-4
+ALL_BGP_UNI_DUTS:
+  - upe-1 
+  - upe-2 
+  - upe-3 
+  - upe-4 
+  - npe-1 
+  - npe-2 
+  - npe-3 
+  - npe-4 
+  - pe-1  
+  - pe-2  
+  - pe-3  
+  - pe-4
+ALL_BGP_VPNv4_DUTS:
+  - upe-1 
+  - upe-2 
+  - upe-3 
+  - upe-4 
+  - npe-1 
+  - npe-2 
+  - npe-3 
+  - npe-4       
+ALL_PCEP_DUTS:  
+  - upe-1 
+  - upe-2 
+  - upe-3 
+  - upe-4 
+  - npe-1 
+  - npe-2 
+  - npe-3 
+  - npe-4 
+  - pe-1  
+  - pe-2  
+  - pe-3  
+  - pe-4
+ALL_EVPN_VPWS_DUTS:
+  - upe-2 
+  - upe-4
+ALL_L3VPN_DUTS:
+  - upe-1 
+  - upe-3 
+UPE-1_ISIS_INTERFACE_LIST: 
+  - Gi0/0/0/2
+  - Gi0/0/0/3
+UPE-2_ISIS_INTERFACE_LIST: 
+  - Gi0/0/0/2
+  - Gi0/0/0/3
+UPE-3_ISIS_INTERFACE_LIST: 
+  - Gi0/0/0/2
+  - Gi0/0/0/3
+UPE-4_ISIS_INTERFACE_LIST:  
+  - Gi0/0/0/2
+  - Gi0/0/0/3
+NPE-1_ISIS_INTERFACE_LIST: 
+  - Gi0/0/0/0
+  - Gi0/0/0/1
+  - Gi0/0/0/2
+  - Gi0/0/0/3
+NPE-2_ISIS_INTERFACE_LIST:  
+  - Gi0/0/0/0
+  - Gi0/0/0/1
+  - Gi0/0/0/2
+  - Gi0/0/0/3
+NPE-3_ISIS_INTERFACE_LIST:  
+  - Gi0/0/0/0
+  - Gi0/0/0/1
+  - Gi0/0/0/2
+  - Gi0/0/0/3
+NPE-4_ISIS_INTERFACE_LIST:  
+  - Gi0/0/0/0
+  - Gi0/0/0/1
+  - Gi0/0/0/2
+  - Gi0/0/0/3
+PE-1_ISIS_INTERFACE_LIST:   
+  - Gi0/0/0/0
+  - Gi0/0/0/1
+  - Gi0/0/0/2
+  - Gi0/0/0/3
+PE-2_ISIS_INTERFACE_LIST:   
+  - Gi0/0/0/0
+  - Gi0/0/0/1
+  - Gi0/0/0/2
+  - Gi0/0/0/3
+PE-3_ISIS_INTERFACE_LIST:   
+  - Gi0/0/0/0
+  - Gi0/0/0/1
+  - Gi0/0/0/2
+  - Gi0/0/0/3
+PE-4_ISIS_INTERFACE_LIST:   
+  - Gi0/0/0/0  
+  - Gi0/0/0/1  
+  - Gi0/0/0/2  
+  - Gi0/0/0/3
+UPE-1_BGP_UNI_NBR_LIST:    
+  - 1.1.1.61  
+  - 1.1.1.62
+UPE-2_BGP_UNI_NBR_LIST:  
+  - 1.1.1.61
+  - 1.1.1.62
+UPE-3_BGP_UNI_NBR_LIST:   
+  - 1.1.1.63
+  - 1.1.1.64
+UPE-4_BGP_UNI_NBR_LIST:    
+  - 1.1.1.63
+  - 1.1.1.64
+NPE-1_BGP_UNI_NBR_LIST:  
+  - 1.1.1.51
+  - 1.1.1.52
+NPE-2_BGP_UNI_NBR_LIST:    
+  - 1.1.1.51
+  - 1.1.1.52
+NPE-3_BGP_UNI_NBR_LIST:    
+  - 1.1.1.53
+  - 1.1.1.54
+NPE-4_BGP_UNI_NBR_LIST:    
+  - 1.1.1.53
+  - 1.1.1.54
+PE-1_BGP_UNI_NBR_LIST:     
+  - 1.1.1.87
+PE-2_BGP_UNI_NBR_LIST:    
+  - 1.1.1.87
+PE-3_BGP_UNI_NBR_LIST:     
+  - 1.1.1.87
+PE-4_BGP_UNI_NBR_LIST:     
+  - 1.1.1.87
+UPE-1_BGP_VPNv4_NBR_LIST:    
+  - 1.1.1.87
+UPE-2_BGP_VPNv4_NBR_LIST:    
+  - 1.1.1.87
+UPE-3_BGP_VPNv4_NBR_LIST:   
+  - 1.1.1.87
+UPE-4_BGP_VPNv4_NBR_LIST:    
+  - 1.1.1.87
+NPE-1_BGP_VPNv4_NBR_LIST:   
+  - 1.1.1.87
+NPE-2_BGP_VPNv4_NBR_LIST:    
+  - 1.1.1.87
+NPE-3_BGP_VPNv4_NBR_LIST:   
+  - 1.1.1.87
+NPE-4_BGP_VPNv4_NBR_LIST:   
+  - 1.1.1.87
+PCC_PEER_LIST:
+  - 1.1.1.51  
+  - 1.1.1.52  
+  - 1.1.1.53  
+  - 1.1.1.54  
+  - 1.1.1.61  
+  - 1.1.1.62  
+  - 1.1.1.63  
+  - 1.1.1.64
+  - 1.1.1.71
+  - 1.1.1.72
+  - 1.1.1.73
+  - 1.1.1.74  
+SR-PCE_PEER:    1.1.1.167
+UPE-1_EVPN_VPWS_GROUP_NAMES:
+UPE-2_EVPN_VPWS_GROUP_NAMES:
+  - BLACK_L2
+UPE-3_EVPN_VPWS_GROUP_NAMES:
+UPE-4_EVPN_VPWS_GROUP_NAMES:
+  - BLACK_L2
+UPE-1_L3VPN_NAMES:
+  - GREEN
+  - ORANGE
+UPE-2_L3VPN_NAMES:
+UPE-3_L3VPN_NAMES:
+  - GREEN
+  - ORANGE
+UPE-4_L3VPN_NAMES:
+
+
+
+
+#*** Variables *** For reference
+#@{ALL_DUTS}=  upe-1  upe-2  upe-3  upe-4  npe-1  npe-2  npe-3  npe-4  pe-1  pe-2  pe-3  pe-4
+#@{ALL_ISIS_DUTS}=  upe-1  upe-2  upe-3  upe-4  npe-1  npe-2  npe-3  npe-4  pe-1  pe-2  pe-3  pe-4
+#@{ALL_BGP_UNI_DUTS}=  upe-1  upe-2  upe-3  upe-4  npe-1  npe-2  npe-3  npe-4  pe-1  pe-2  pe-3  pe-4
+#@{ALL_BGP_VPNv4_DUTS}=  upe-1  upe-2  upe-3  upe-4  npe-1  npe-2  npe-3  npe-4
+#@{ALL_PCEP_DUTS}=  upe-1  upe-2  upe-3  upe-4  npe-1  npe-2  npe-3  npe-4  pe-1  pe-2  pe-3  pe-4
+#@{UPE-1_ISIS_INTERFACE_LIST}=  Gi0/0/0/2  Gi0/0/0/3
+#@{UPE-2_ISIS_INTERFACE_LIST}=  Gi0/0/0/2  Gi0/0/0/3
+#@{UPE-3_ISIS_INTERFACE_LIST}=  Gi0/0/0/2  Gi0/0/0/3
+#@{UPE-4_ISIS_INTERFACE_LIST}=  Gi0/0/0/2  Gi0/0/0/3
+#@{NPE-1_ISIS_INTERFACE_LIST}=  Gi0/0/0/0  Gi0/0/0/1  Gi0/0/0/2  Gi0/0/0/3
+#@{NPE-2_ISIS_INTERFACE_LIST}=  Gi0/0/0/0  Gi0/0/0/1  Gi0/0/0/2  Gi0/0/0/3
+#@{NPE-3_ISIS_INTERFACE_LIST}=  Gi0/0/0/0  Gi0/0/0/1  Gi0/0/0/2  Gi0/0/0/3
+#@{NPE-4_ISIS_INTERFACE_LIST}=  Gi0/0/0/0  Gi0/0/0/1  Gi0/0/0/2  Gi0/0/0/3
+#@{PE-1_ISIS_INTERFACE_LIST}=   Gi0/0/0/0  Gi0/0/0/1  Gi0/0/0/2  Gi0/0/0/3
+#@{PE-2_ISIS_INTERFACE_LIST}=   Gi0/0/0/0  Gi0/0/0/1  Gi0/0/0/2  Gi0/0/0/3
+#@{PE-3_ISIS_INTERFACE_LIST}=   Gi0/0/0/0  Gi0/0/0/1  Gi0/0/0/2  Gi0/0/0/3
+#@{PE-4_ISIS_INTERFACE_LIST}=   Gi0/0/0/0  Gi0/0/0/1  Gi0/0/0/2  Gi0/0/0/3
+#@{UPE-1_BGP_UNI_NBR_LIST}=    1.1.1.61  1.1.1.62
+#@{UPE-2_BGP_UNI_NBR_LIST}=    1.1.1.61  1.1.1.62
+#@{UPE-3_BGP_UNI_NBR_LIST}=    1.1.1.63  1.1.1.64
+#@{UPE-4_BGP_UNI_NBR_LIST}=    1.1.1.63  1.1.1.64
+#@{NPE-1_BGP_UNI_NBR_LIST}=    1.1.1.51  1.1.1.52
+#@{NPE-2_BGP_UNI_NBR_LIST}=    1.1.1.51  1.1.1.52
+#@{NPE-3_BGP_UNI_NBR_LIST}=    1.1.1.53  1.1.1.54
+#@{NPE-4_BGP_UNI_NBR_LIST}=    1.1.1.53  1.1.1.54
+#@{PE-1_BGP_UNI_NBR_LIST}=     1.1.1.87
+#@{PE-2_BGP_UNI_NBR_LIST}=     1.1.1.87
+#@{PE-3_BGP_UNI_NBR_LIST}=     1.1.1.87
+#@{PE-4_BGP_UNI_NBR_LIST}=     1.1.1.87
+#@{UPE-1_BGP_VPNv4_NBR_LIST}=    1.1.1.87
+#@{UPE-2_BGP_VPNv4_NBR_LIST}=    1.1.1.87
+#@{UPE-3_BGP_VPNv4_NBR_LIST}=    1.1.1.87
+#@{UPE-4_BGP_VPNv4_NBR_LIST}=    1.1.1.87
+#@{NPE-1_BGP_VPNv4_NBR_LIST}=    1.1.1.87
+#@{NPE-2_BGP_VPNv4_NBR_LIST}=    1.1.1.87
+#@{NPE-3_BGP_VPNv4_NBR_LIST}=    1.1.1.87
+#@{NPE-4_BGP_VPNv4_NBR_LIST}=    1.1.1.87
+#@{PCC_PEER_LIST}=    1.1.1.51  1.1.1.52  1.1.1.53  1.1.1.54  1.1.1.61  1.1.1.62  1.1.1.63  1.1.1.64  1.1.1.71  1.1.1.72  1.1.1.73  1.1.1.74
+#${SR-PCE_PEER}    1.1.1.167
+
+
+

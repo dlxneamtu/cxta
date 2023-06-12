@@ -1,0 +1,49 @@
+
+2023-05-29 21:52:02,496: %UNICON-INFO: +++ cnc-4 logfile /home/cisco/cxta/device_logs/cnc-4-20230529T215202488.log +++
+
+2023-05-29 21:52:02,497: %UNICON-INFO: +++ Unicon plugin linux (unicon.plugins.linux) +++
+
+2023-05-29 21:52:02,508: %UNICON-INFO: +++ connection to spawn: ssh -l cw-admin 10.62.157.175, id: 140348496322720 +++
+
+2023-05-29 21:52:02,513: %UNICON-INFO: connection to cnc-4
+Warning: Permanently added '10.62.157.175' (ECDSA) to the list of known hosts.
+(cw-admin@10.62.157.175) Password: 
+Last login: Mon May 29 21:51:18 2023 from 10.209.208.72
+Cisco Crosswork
+
+  #####  ######  #######  #####   #####  #     # ####### ######  #    #
+ #     # #     # #     # #     # #     # #  #  # #     # #     # #   #
+ #       #     # #     # #       #       #  #  # #     # #     # #  #
+ #       ######  #     #  #####   #####  #  #  # #     # ######  ###
+ #       #   #   #     #       #       # #  #  # #     # #   #   #  #
+ #     # #    #  #     # #     # #     # #  #  # #     # #    #  #   #
+  #####  #     # #######  #####   #####   ## ##  ####### #     # #    #
+
+
+
+Copyright (c) 2022 by Cisco Systems, Inc.
+Version: release-4.4.0 (Build 250)
+Built on: Oct-27-2022 08:49 AM UTC
+
+cw-admin@10-62-157-180-hybrid:~$ 
+
+2023-05-29 21:52:03,696: %UNICON-INFO: Learned hostname: 10-62-157-180-hybrid
+
+cw-admin@10-62-157-180-hybrid:~$ 
+
+2023-05-29 21:52:03,777: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-29 21:52:04,665: %UNICON-INFO: +++ 10-62-157-180-hybrid with via 'cli': executing command 'sudo su' +++
+sudo su
+[sudo] password for cw-admin: 
+root@10-62-157-180-hybrid:/home/cw-admin# 
+
+2023-05-29 21:52:05,710: %UNICON-INFO: +++ 10-62-157-180-hybrid with via 'cli': executing command 'kubectl get nodes' +++
+kubectl get nodes
+NAME                             STATUS   ROLES    AGE    VERSION
+10-62-157-176-hybrid.cisco.com   Ready    master   105d   v1.18.0
+10-62-157-177-worker.cisco.com   Ready    <none>   105d   v1.18.0
+10-62-157-178-hybrid.cisco.com   Ready    master   105d   v1.18.0
+10-62-157-180-hybrid.cisco.com   Ready    master   105d   v1.18.0
+10-62-157-182-worker.cisco.com   Ready    <none>   52d    v1.18.0
+root@10-62-157-180-hybrid:/home/cw-admin# 

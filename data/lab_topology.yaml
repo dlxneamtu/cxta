@@ -1,0 +1,406 @@
+expected_topo_nodes:
+  upe-1:
+    router-id: 1.1.1.51
+    interfaces: 
+        GigabitEthernet0/0/0/2: 192.168.5.51
+        GigabitEthernet0/0/0/3: 192.168.6.51
+  upe-2:
+    router-id: 1.1.1.52
+    interfaces: 
+        GigabitEthernet0/0/0/2: 192.168.5.52
+        GigabitEthernet0/0/0/3: 192.168.7.52
+  upe-3:    
+    router-id: 1.1.1.53
+    interfaces: 
+        GigabitEthernet0/0/0/2: 192.168.15.53
+        GigabitEthernet0/0/0/3: 192.168.16.53
+  upe-4:
+    router-id: 1.1.1.54
+    interfaces: 
+        GigabitEthernet0/0/0/2: 192.168.15.54
+        GigabitEthernet0/0/0/3: 192.168.17.54
+  npe-1:
+    router-id: 1.1.1.61
+    interfaces: 
+        GigabitEthernet0/0/0/0: 192.168.6.61
+        GigabitEthernet0/0/0/1: 192.168.21.61
+        GigabitEthernet0/0/0/2: 192.168.22.61
+        GigabitEthernet0/0/0/3: 192.168.221.61
+  npe-2:
+    router-id: 1.1.1.62
+    interfaces: 
+        GigabitEthernet0/0/0/0: 192.168.7.62
+        GigabitEthernet0/0/0/1: 192.168.21.62
+        GigabitEthernet0/0/0/2: 192.168.22.62
+        GigabitEthernet0/0/0/3: 192.168.222.62
+  npe-3:
+    router-id: 1.1.1.63
+    interfaces: 
+        GigabitEthernet0/0/0/0: 192.168.16.63
+        GigabitEthernet0/0/0/1: 192.168.23.63
+        GigabitEthernet0/0/0/2: 192.168.22.63
+        GigabitEthernet0/0/0/3: 192.168.223.63
+  npe-4:
+    router-id: 1.1.1.64
+    interfaces: 
+        GigabitEthernet0/0/0/0: 192.168.17.64
+        GigabitEthernet0/0/0/1: 192.168.23.64
+        GigabitEthernet0/0/0/2: 192.168.24.64
+        GigabitEthernet0/0/0/3: 192.168.224.64
+  pe-1:
+    router-id: 1.1.1.71
+    interfaces: 
+        GigabitEthernet0/0/0/0: 192.168.221.71
+        GigabitEthernet0/0/0/1: 192.168.31.71
+        GigabitEthernet0/0/0/2: 192.168.32.71
+        GigabitEthernet0/0/0/3: 192.168.41.71
+  pe-2:
+    router-id: 1.1.1.72
+    interfaces: 
+        GigabitEthernet0/0/0/0: 192.168.222.72
+        GigabitEthernet0/0/0/1: 192.168.31.72
+        GigabitEthernet0/0/0/2: 192.168.34.72
+        GigabitEthernet0/0/0/3: 192.168.42.72
+  pe-3:
+    router-id: 1.1.1.73
+    interfaces: 
+        GigabitEthernet0/0/0/0: 192.168.223.73
+        GigabitEthernet0/0/0/1: 192.168.33.73
+        GigabitEthernet0/0/0/2: 192.168.32.73
+        GigabitEthernet0/0/0/3: 192.168.43.73
+  pe-4:
+    router-id: 1.1.1.74
+    interfaces: 
+        GigabitEthernet0/0/0/0: 192.168.224.74
+        GigabitEthernet0/0/0/1: 192.168.33.74
+        GigabitEthernet0/0/0/2: 192.168.34.74
+        GigabitEthernet0/0/0/3: 192.168.44.74
+        
+expected_topo_links:
+  "upe-1 : GigabitEthernet0/0/0/3 : npe-1 : GigabitEthernet0/0/0/0 : IPv4":
+    system-id: 0010.0100.1051
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10
+  "upe-1 : GigabitEthernet0/0/0/2 : upe-2 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1051
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10        
+  "upe-2 : GigabitEthernet0/0/0/2 : upe-1 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1052
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10
+  "upe-2 : GigabitEthernet0/0/0/3 : npe-2 : GigabitEthernet0/0/0/0 : IPv4":
+    system-id: 0010.0100.1052
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10    
+  "upe-3 : GigabitEthernet0/0/0/2 : upe-4 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1053
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10      
+  "upe-3 : GigabitEthernet0/0/0/3 : npe-3 : GigabitEthernet0/0/0/0 : IPv4":
+    system-id: 0010.0100.1053
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10 
+  "upe-4 : GigabitEthernet0/0/0/2 : upe-3 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1054
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10     
+  "upe-4 : GigabitEthernet0/0/0/3 : npe-4 : GigabitEthernet0/0/0/0 : IPv4":
+    system-id: 0010.0100.1054
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10     
+  "npe-1 : GigabitEthernet0/0/0/2 : npe-3 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1061
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10  
+  "npe-1 : GigabitEthernet0/0/0/0 : upe-1 : GigabitEthernet0/0/0/3 : IPv4":
+    system-id: 0010.0100.1061
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10 
+  "npe-1 : GigabitEthernet0/0/0/3 : pe-1 : GigabitEthernet0/0/0/0 : IPv4":
+    system-id: 0010.0100.1061
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10  
+  "npe-1 : GigabitEthernet0/0/0/1 : npe-2 : GigabitEthernet0/0/0/1 : IPv4":
+    system-id: 0010.0100.1061
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10  
+  "npe-1 : GigabitEthernet0/0/0/2 : npe-3 : GigabitEthernet0/0/0/2 : IPv4":    
+    system-id: 0010.0100.1061
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10    
+  "npe-2 : GigabitEthernet0/0/0/2 : npe-4 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1062
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10  
+  "npe-2 : GigabitEthernet0/0/0/0 : upe-2 : GigabitEthernet0/0/0/3 : IPv4":
+    system-id: 0010.0100.1062
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10 
+  "npe-2 : GigabitEthernet0/0/0/3 : pe-2 : GigabitEthernet0/0/0/0 : IPv4":
+    system-id: 0010.0100.1062
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+  "npe-2 : GigabitEthernet0/0/0/1 : npe-1 : GigabitEthernet0/0/0/1 : IPv4":
+    system-id: 0010.0100.1062
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10  
+  "npe-3 : GigabitEthernet0/0/0/2 : npe-1 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1063
+    level: 2
+    sid: 30015
+    igp_metric: 10
+    te_metric: 10   
+    delay_metric: 10 
+  "npe-3 : GigabitEthernet0/0/0/0 : upe-3 : GigabitEthernet0/0/0/3 : IPv4":
+    system-id: 0010.0100.1063
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10   
+  "npe-3 : GigabitEthernet0/0/0/2 : npe-1 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1063
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10 
+  "npe-3 : GigabitEthernet0/0/0/3 : pe-3 : GigabitEthernet0/0/0/0 : IPv4":
+    system-id: 0010.0100.1063
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10     
+  "npe-3 : GigabitEthernet0/0/0/1 : npe-4 : GigabitEthernet0/0/0/1 : IPv4":
+    system-id: 0010.0100.1063
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10    
+  "npe-4 : GigabitEthernet0/0/0/0 : upe-4 : GigabitEthernet0/0/0/3 : IPv4":
+    system-id: 0010.0100.1064
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10 
+  "npe-4 : GigabitEthernet0/0/0/3 : pe-4 : GigabitEthernet0/0/0/0 : IPv4":
+    system-id: 0010.0100.1064
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10 
+  "npe-4 : GigabitEthernet0/0/0/1 : npe-3 : GigabitEthernet0/0/0/1 : IPv4":
+    system-id: 0010.0100.1064
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10    
+  "npe-4 : GigabitEthernet0/0/0/2 : npe-2 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1064
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10  
+  "pe-1 : GigabitEthernet0/0/0/3 : p-1 : GigabitEthernet0/0/0/1 : IPv4":
+    system-id: 0010.0100.1071
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10  
+  "pe-1 : GigabitEthernet0/0/0/0 : npe-1 : GigabitEthernet0/0/0/3 : IPv4":
+    system-id: 0010.0100.1071
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10  
+  "pe-1 : GigabitEthernet0/0/0/2 : pe-3 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1071
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10 
+  "pe-1 : GigabitEthernet0/0/0/1 : pe-2 : GigabitEthernet0/0/0/1 : IPv4":
+    system-id: 0010.0100.1071
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10   
+  "pe-2 : GigabitEthernet0/0/0/3 : p-1 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1072
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10 
+  "pe-2 : GigabitEthernet0/0/0/2 : pe-4 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1072
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10    
+  "pe-2 : GigabitEthernet0/0/0/1 : pe-1 : GigabitEthernet0/0/0/1 : IPv4":
+    system-id: 0010.0100.1072
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10 
+  "pe-2 : GigabitEthernet0/0/0/0 : npe-2 : GigabitEthernet0/0/0/3 : IPv4":
+    system-id: 0010.0100.10610721
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10 
+  "pe-3 : GigabitEthernet0/0/0/2 : pe-1 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1073
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10  
+  "pe-3 : GigabitEthernet0/0/0/1 : pe-4 : GigabitEthernet0/0/0/1 : IPv4":
+    system-id: 0010.0100.1073
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10 
+  "pe-3 : GigabitEthernet0/0/0/3 : p-1 : GigabitEthernet0/0/0/3 : IPv4":
+    system-id: 0010.0100.1073
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10 
+  "pe-3 : GigabitEthernet0/0/0/0 : npe-3 : GigabitEthernet0/0/0/3 : IPv4":
+    system-id: 0010.0100.1073
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10  
+  "pe-4 : GigabitEthernet0/0/0/0 : npe-4 : GigabitEthernet0/0/0/3 : IPv4":
+    system-id: 0010.0100.1074
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10     
+  "pe-4 : GigabitEthernet0/0/0/3 : p-1 : GigabitEthernet0/0/0/4 : IPv4":
+    system-id: 0010.0100.1074
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10      
+  "pe-4 : GigabitEthernet0/0/0/1 : pe-3 : GigabitEthernet0/0/0/1 : IPv4":
+    system-id: 0010.0100.1074
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+  "pe-4 : GigabitEthernet0/0/0/2 : pe-2 : GigabitEthernet0/0/0/2 : IPv4":
+    system-id: 0010.0100.1074
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10  
+  "p-1 : GigabitEthernet0/0/0/1 : pe-1 : GigabitEthernet0/0/0/3 : IPv4":
+    system-id: 0010.0100.1081
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10      
+  "p-1 : GigabitEthernet0/0/0/4 : pe-4 : GigabitEthernet0/0/0/3 : IPv4":
+    system-id: 0010.0100.1081
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10    
+  "p-1 : GigabitEthernet0/0/0/7 : rr-1 : GigabitEthernet0/0/0/0 : IPv4":
+    system-id: 0010.0100.1081
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10    
+  "p-1 : GigabitEthernet0/0/0/2 : pe-2 : GigabitEthernet0/0/0/3 : IPv4":
+    system-id: 0010.0100.1081
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10    
+  "p-1 : GigabitEthernet0/0/0/3 : pe-3 : GigabitEthernet0/0/0/3 : IPv4":
+    system-id: 0010.0100.1081
+    level: 2
+    sid: 30005
+    igp_metric: 10
+    te_metric: 10  
+    delay_metric: 10  

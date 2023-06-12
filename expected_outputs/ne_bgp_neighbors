@@ -1,0 +1,110 @@
+cloud-user@ncs# devices device *pe-* live-status exec show bgp neigh br
+devices device npe-1 live-status exec show
+    result
+Thu May 25 08:00:10.822 UTC
+
+Neighbor         Spk    AS  Description                         Up/Down  NBRState
+1.1.1.51          0 21183                                          1w4d Established
+1.1.1.52          0 21183                                          1w4d Established
+1.1.1.87          0 21183                                          1w4d Established
+1.1.1.88          0 21183                                      00:00:00 Idle
+RP/0/RP0/CPU0:npe-1#
+devices device npe-2 live-status exec show
+    result
+Thu May 25 08:00:11.312 UTC
+
+Neighbor         Spk    AS  Description                         Up/Down  NBRState
+1.1.1.51          0 21183                                          1w4d Established
+1.1.1.52          0 21183                                          1w4d Established
+1.1.1.87          0 21183                                          1w4d Established
+1.1.1.88          0 21183                                      00:00:00 Idle
+RP/0/RP0/CPU0:npe-2#
+devices device npe-3 live-status exec show
+    result
+Thu May 25 08:00:11.861 UTC
+
+Neighbor         Spk    AS  Description                         Up/Down  NBRState
+1.1.1.53          0 21183                                          1w4d Established
+1.1.1.54          0 21183                                          1w4d Established
+1.1.1.87          0 21183                                          1w4d Established
+1.1.1.88          0 21183                                      00:00:00 Idle
+RP/0/RP0/CPU0:npe-3#
+devices device npe-4 live-status exec show
+    result
+Thu May 25 08:00:12.609 UTC
+
+Neighbor         Spk    AS  Description                         Up/Down  NBRState
+1.1.1.53          0 21183                                          1w4d Established
+1.1.1.54          0 21183                                          1w4d Established
+1.1.1.87          0 21183                                          1w4d Established
+1.1.1.88          0 21183                                      00:00:00 Idle
+RP/0/RP0/CPU0:npe-4#
+devices device pe-1 live-status exec show
+    result
+Thu May 25 08:00:16.975 UTC
+
+Neighbor         Spk    AS  Description                         Up/Down  NBRState
+1.1.1.87          0 21183                                          1w4d Established
+1.1.1.88          0 21183                                      00:00:00 Idle
+RP/0/RP0/CPU0:pe-1#
+devices device pe-2 live-status exec show
+    result
+Thu May 25 08:00:17.491 UTC
+
+Neighbor         Spk    AS  Description                         Up/Down  NBRState
+1.1.1.87          0 21183                                          1w4d Established
+1.1.1.88          0 21183                                      00:00:00 Idle
+RP/0/RP0/CPU0:pe-2#
+devices device pe-3 live-status exec show
+    result
+Thu May 25 08:00:17.986 UTC
+
+Neighbor         Spk    AS  Description                         Up/Down  NBRState
+1.1.1.87          0 21183                                          1w4d Established
+1.1.1.88          0 21183                                      00:00:00 Idle
+RP/0/RP0/CPU0:pe-3#
+devices device pe-4 live-status exec show
+    result
+Thu May 25 08:00:18.470 UTC
+
+Neighbor         Spk    AS  Description                         Up/Down  NBRState
+1.1.1.87          0 21183                                          1w4d Established
+1.1.1.88          0 21183                                      00:00:00 Idle
+RP/0/RP0/CPU0:pe-4#
+devices device upe-1 live-status exec show
+    result
+Thu May 25 08:00:15.206 UTC
+
+Neighbor         Spk    AS  Description                         Up/Down  NBRState
+1.1.1.61          0 21183                                          1w4d Established
+1.1.1.62          0 21183                                          1w4d Established
+1.1.1.87          0 21183                                          1w0d Established
+RP/0/RP0/CPU0:upe-1#
+devices device upe-2 live-status exec show
+    result
+Thu May 25 08:00:15.761 UTC
+
+Neighbor         Spk    AS  Description                         Up/Down  NBRState
+1.1.1.61          0 21183                                          1w4d Established
+1.1.1.62          0 21183                                          1w4d Established
+1.1.1.87          0 21183                                          1w0d Established
+RP/0/RP0/CPU0:upe-2#
+devices device upe-3 live-status exec show
+    result
+Thu May 25 08:00:16.265 UTC
+
+Neighbor         Spk    AS  Description                         Up/Down  NBRState
+1.1.1.63          0 21183                                          1w4d Established
+1.1.1.64          0 21183                                          1w4d Established
+1.1.1.87          0 21183                                          1w0d Established
+RP/0/RP0/CPU0:upe-3#
+devices device upe-4 live-status exec show
+    result
+Thu May 25 08:00:16.774 UTC
+
+Neighbor         Spk    AS  Description                         Up/Down  NBRState
+1.1.1.63          0 21183                                          1w4d Established
+1.1.1.64          0 21183                                          1w4d Established
+1.1.1.87          0 21183                                          1w0d Established
+RP/0/RP0/CPU0:upe-4#
+cloud-user@ncs#

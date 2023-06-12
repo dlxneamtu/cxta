@@ -1,0 +1,40 @@
+RP/0/RP0/CPU0:sr-pce-1#sho pce ipv4 peer
+Thu May 25 08:06:41.198 UTC
+
+PCE's peer database:
+--------------------
+Peer address: 1.1.1.51
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+Peer address: 1.1.1.52
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+Peer address: 1.1.1.53
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+Peer address: 1.1.1.54
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+Peer address: 1.1.1.61
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+Peer address: 1.1.1.63
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+Peer address: 1.1.1.64
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+
+RP/0/RP0/CPU0:upe-3#show segment-routing traffic-eng pcc ipv4 peer brief
+Fri May 26 19:58:17.948 UTC
+
+             Address   Precedence        State    Learned From
+-------------------- ------------ ------------ ---------------
+           1.1.1.167          255           up          config

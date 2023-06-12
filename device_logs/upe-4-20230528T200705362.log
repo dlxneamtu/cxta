@@ -1,0 +1,545 @@
+
+2023-05-28 20:07:05,378: %UNICON-INFO: +++ upe-4 logfile /home/cisco/cxta/device_logs/upe-4-20230528T200705362.log +++
+
+2023-05-28 20:07:05,380: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-28 20:07:05,387: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-28 20:07:05,398: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140385499498000 +++
+
+2023-05-28 20:07:05,400: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Sun May 28 20:06:35 2023 from 10.209.218.74
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-28 20:07:06,393: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-28 20:07:06,396: %UNICON-INFO: connection to upe-4
+ssh -l cisco 17.3.11.54
+]133;C;Password: 
+Last login: Sun May 28 20:04:26 2023 from 17.3.11.163
+
+
+
+RP/0/RP0/CPU0:upe-4#
+
+2023-05-28 20:07:06,889: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-28 20:07:07,228: %UNICON-INFO: +++ upe-4 with via 'cli': executing command 'term length 0' +++
+term length 0
+Sun May 28 20:04:58.004 UTC
+RP/0/RP0/CPU0:upe-4#
+
+2023-05-28 20:07:07,795: %UNICON-INFO: +++ upe-4 with via 'cli': executing command 'term width 0' +++
+term width 0
+Sun May 28 20:04:58.582 UTC
+RP/0/RP0/CPU0:upe-4#
+
+2023-05-28 20:07:08,381: %UNICON-INFO: +++ upe-4 with via 'cli': executing command 'show version' +++
+show version
+Sun May 28 20:04:59.154 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+upe-4 uptime is 2 weeks, 12 hours, 34 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:upe-4#
+
+2023-05-28 20:07:09,520: %UNICON-INFO: +++ upe-4 with via 'cli': executing command 'show running-config' +++
+show running-config
+Sun May 28 20:05:00.292 UTC
+!! Building configuration...
+!! IOS XR Configuration 7.11.1.12I
+!! Last configuration change at Sun May 28 19:44:01 2023 by cisco
+!
+hostname upe-4
+logging trap warning
+logging console debugging
+logging monitor debugging
+username cisco
+ group root-lr
+ group cisco-support
+ password 7 030752180500701E1D
+!
+cdp
+grpc
+ port 57400
+ no-tls
+!
+vrf 100
+ address-family ipv4 unicast
+  import route-target
+   100:100
+  !
+  export route-target
+   100:100
+  !
+ !
+!
+vrf 200
+ address-family ipv4 unicast
+  import route-target
+   200:200
+  !
+  export route-target
+   200:200
+  !
+ !
+!
+address-family ipv4 unicast
+!
+snmp-server ifindex persist
+snmp-server community public RO
+snmp-server community robot-demo2 RO
+alias exec xrd sh run | file disk0:/upe-4-startup.cfg
+alias exec bgpvpn show bgp vpnv4 unicast
+netconf-yang agent
+ ssh
+!
+interface Loopback0
+ ipv4 address 1.1.1.54 255.255.255.255
+!
+interface MgmtEth0/RP0/CPU0/0
+ ipv4 address 17.3.11.54 255.255.255.0
+!
+interface GigabitEthernet0/0/0/0
+ cdp
+ vrf 200
+ ipv4 address 192.168.14.54 255.255.255.0
+!
+interface GigabitEthernet0/0/0/1
+ description T-SDN Interface
+ cdp
+ l2transport
+ !
+!
+interface GigabitEthernet0/0/0/2
+ cdp
+ ipv4 address 192.168.15.54 255.255.255.0
+!
+interface GigabitEthernet0/0/0/3
+ cdp
+ ipv4 address 192.168.17.54 255.255.255.0
+!
+extcommunity-set opaque RED
+  1004
+end-set
+!
+extcommunity-set opaque color1124
+  1124
+end-set
+!
+route-policy vpnv4
+  if destination in (10.1.4.0/24 ge 24) then
+    set extcommunity color RED
+  endif
+end-policy
+!
+route-policy evpn_odn_policy
+  if rd in (ios-regex '.*..*..*..*:(24)') then
+    set extcommunity color color1124
+  endif
+end-policy
+!
+router static
+ vrf 200
+  address-family ipv4 unicast
+   10.1.4.0/24 192.168.14.44
+  !
+ !
+!
+router isis ACCESS
+ is-type level-2-only
+ net 49.0021.0010.0100.1054.00
+ address-family ipv4 unicast
+  metric-style wide
+  advertise passive-only
+  mpls traffic-eng level-2-only
+  mpls traffic-eng router-id Loopback0
+  segment-routing mpls sr-prefer
+  mpls ldp auto-config
+ !
+ interface Loopback0
+  passive
+  circuit-type level-2-only
+  address-family ipv4 unicast
+   prefix-sid absolute 16054
+   prefix-sid strict-spf absolute 24054
+  !
+ !
+ interface GigabitEthernet0/0/0/2
+  circuit-type level-2-only
+  point-to-point
+  address-family ipv4 unicast
+  !
+ !
+ interface GigabitEthernet0/0/0/3
+  circuit-type level-2-only
+  point-to-point
+  address-family ipv4 unicast
+  !
+ !
+!
+router bgp 21183
+ bgp router-id 1.1.1.54
+ address-family ipv4 unicast
+ !
+ address-family vpnv4 unicast
+ !
+ address-family l2vpn evpn
+ !
+ neighbor-group RR
+  remote-as 21183
+  update-source Loopback0
+  address-family vpnv4 unicast
+   next-hop-self
+   route-policy vpnv4 out
+   soft-reconfiguration inbound always
+  !
+  address-family l2vpn evpn
+   next-hop-self
+   route-policy evpn_odn_policy out
+  !
+ !
+ neighbor-group RR-NPE
+  remote-as 21183
+  update-source Loopback0
+  address-family ipv4 unicast
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 1.1.1.63
+  use neighbor-group RR-NPE
+ !
+ neighbor 1.1.1.64
+  use neighbor-group RR-NPE
+ !
+ neighbor 1.1.1.87
+  use neighbor-group RR
+ !
+ vrf 200
+  rd 100.100.100.102:200
+  address-family ipv4 unicast
+   redistribute static
+  !
+ !
+!
+evpn
+ evi 24
+  bgp
+  !
+  control-word-disable
+ !
+ source interface Loopback0
+!
+l2vpn
+ xconnect group BLACK_L2
+  p2p BLACK_L2
+   interface GigabitEthernet0/0/0/1
+   neighbor evpn evi 24 target 22 source 44
+   !
+  !
+ !
+!
+mpls oam
+!
+mpls traffic-eng
+!
+mpls ldp
+!
+segment-routing
+ global-block 16000 23999
+ local-block 15000 15999
+ traffic-eng
+  on-demand color 1002
+   dynamic
+    pcep
+    !
+   !
+  !
+  on-demand color 1124
+   dynamic
+    pcep
+    !
+    metric
+     type te
+    !
+   !
+  !
+  pcc
+   source-address ipv4 1.1.1.54
+   pce address ipv4 1.1.1.167
+   !
+   report-all
+  !
+ !
+!
+netconf agent tty
+!
+mpls label range table 0 30000 1048575
+ssh server logging
+ssh server rate-limit 100
+ssh server session-limit 100
+ssh server vrf default
+ssh server netconf vrf default
+end
+
+RP/0/RP0/CPU0:upe-4#
+
+2023-05-28 20:07:16,269: %UNICON-INFO: upe-4 is already connected
+
+2023-05-28 20:07:16,677: %UNICON-INFO: +++ upe-4 with via 'cli': executing command 'show running-config' +++
+show running-config
+Sun May 28 20:05:07.439 UTC
+!! Building configuration...
+!! IOS XR Configuration 7.11.1.12I
+!! Last configuration change at Sun May 28 20:05:02 2023 by cisco
+!
+hostname upe-4
+logging trap warning
+logging console debugging
+logging monitor debugging
+username cisco
+ group root-lr
+ group cisco-support
+ password 7 030752180500701E1D
+!
+cdp
+grpc
+ port 57400
+ no-tls
+!
+vrf 100
+ address-family ipv4 unicast
+  import route-target
+   100:100
+  !
+  export route-target
+   100:100
+  !
+ !
+!
+vrf 200
+ address-family ipv4 unicast
+  import route-target
+   200:200
+  !
+  export route-target
+   200:200
+  !
+ !
+!
+address-family ipv4 unicast
+!
+snmp-server ifindex persist
+snmp-server community public RO
+snmp-server community robot-demo2 RO
+alias exec xrd sh run | file disk0:/upe-4-startup.cfg
+alias exec bgpvpn show bgp vpnv4 unicast
+netconf-yang agent
+ ssh
+!
+interface Loopback0
+ ipv4 address 1.1.1.54 255.255.255.255
+!
+interface Loopback164
+ ipv4 address 1.1.1.54 255.255.255.255
+!
+interface MgmtEth0/RP0/CPU0/0
+ ipv4 address 17.3.11.54 255.255.255.0
+!
+interface GigabitEthernet0/0/0/0
+ cdp
+ vrf 200
+ ipv4 address 192.168.14.54 255.255.255.0
+!
+interface GigabitEthernet0/0/0/1
+ description T-SDN Interface
+ cdp
+ l2transport
+ !
+!
+interface GigabitEthernet0/0/0/2
+ cdp
+ ipv4 address 192.168.15.54 255.255.255.0
+!
+interface GigabitEthernet0/0/0/3
+ cdp
+ ipv4 address 192.168.17.54 255.255.255.0
+!
+extcommunity-set opaque RED
+  1004
+end-set
+!
+extcommunity-set opaque color1124
+  1124
+end-set
+!
+route-policy vpnv4
+  if destination in (10.1.4.0/24 ge 24) then
+    set extcommunity color RED
+  endif
+end-policy
+!
+route-policy evpn_odn_policy
+  if rd in (ios-regex '.*..*..*..*:(24)') then
+    set extcommunity color color1124
+  endif
+end-policy
+!
+router static
+ vrf 200
+  address-family ipv4 unicast
+   10.1.4.0/24 192.168.14.44
+  !
+ !
+!
+router isis ACCESS
+ is-type level-2-only
+ net 49.0021.0010.0100.1054.00
+ address-family ipv4 unicast
+  metric-style wide
+  advertise passive-only
+  mpls traffic-eng level-2-only
+  mpls traffic-eng router-id Loopback0
+  segment-routing mpls sr-prefer
+  mpls ldp auto-config
+ !
+ interface Loopback0
+  passive
+  circuit-type level-2-only
+  address-family ipv4 unicast
+   prefix-sid absolute 16054
+   prefix-sid strict-spf absolute 24054
+  !
+ !
+ interface GigabitEthernet0/0/0/2
+  circuit-type level-2-only
+  point-to-point
+  address-family ipv4 unicast
+  !
+ !
+ interface GigabitEthernet0/0/0/3
+  circuit-type level-2-only
+  point-to-point
+  address-family ipv4 unicast
+  !
+ !
+!
+router bgp 21183
+ bgp router-id 1.1.1.54
+ address-family ipv4 unicast
+ !
+ address-family vpnv4 unicast
+ !
+ address-family l2vpn evpn
+ !
+ neighbor-group RR
+  remote-as 21183
+  update-source Loopback0
+  address-family vpnv4 unicast
+   next-hop-self
+   route-policy vpnv4 out
+   soft-reconfiguration inbound always
+  !
+  address-family l2vpn evpn
+   next-hop-self
+   route-policy evpn_odn_policy out
+  !
+ !
+ neighbor-group RR-NPE
+  remote-as 21183
+  update-source Loopback0
+  address-family ipv4 unicast
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 1.1.1.63
+  use neighbor-group RR-NPE
+ !
+ neighbor 1.1.1.64
+  use neighbor-group RR-NPE
+ !
+ neighbor 1.1.1.87
+  use neighbor-group RR
+ !
+ vrf 200
+  rd 100.100.100.102:200
+  address-family ipv4 unicast
+   redistribute static
+  !
+ !
+!
+evpn
+ evi 24
+  bgp
+  !
+  control-word-disable
+ !
+ source interface Loopback0
+!
+l2vpn
+ xconnect group BLACK_L2
+  p2p BLACK_L2
+   interface GigabitEthernet0/0/0/1
+   neighbor evpn evi 24 target 22 source 44
+   !
+  !
+ !
+!
+mpls oam
+!
+mpls traffic-eng
+!
+mpls ldp
+!
+segment-routing
+ global-block 16000 23999
+ local-block 15000 15999
+ traffic-eng
+  on-demand color 1002
+   dynamic
+    pcep
+    !
+   !
+  !
+  on-demand color 1124
+   dynamic
+    pcep
+    !
+    metric
+     type te
+    !
+   !
+  !
+  pcc
+   source-address ipv4 1.1.1.54
+   pce address ipv4 1.1.1.167
+   !
+   report-all
+  !
+ !
+!
+netconf agent tty
+!
+mpls label range table 0 30000 1048575
+ssh server logging
+ssh server rate-limit 100
+ssh server session-limit 100
+ssh server vrf default
+ssh server netconf vrf default
+end
+
+RP/0/RP0/CPU0:upe-4#

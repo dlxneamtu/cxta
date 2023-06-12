@@ -1,0 +1,10 @@
+
+2023-05-29 21:50:27,908: %UNICON-INFO: +++ cnc-4 logfile /home/cisco/cxta/device_logs/cnc-4-20230529T215027898.log +++
+
+2023-05-29 21:50:27,909: %UNICON-INFO: +++ Unicon plugin linux (unicon.plugins.linux) +++
+
+2023-05-29 21:50:27,918: %UNICON-INFO: +++ connection to spawn: ssh -l root 10.62.157.175, id: 139816621085360 +++
+
+2023-05-29 21:50:27,920: %UNICON-INFO: connection to cnc-4
+Warning: Permanently added '10.62.157.175' (ECDSA) to the list of known hosts.
+(root@10.62.157.175) Password: 

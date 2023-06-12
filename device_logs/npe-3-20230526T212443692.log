@@ -1,0 +1,193 @@
+
+2023-05-26 21:24:43,709: %UNICON-INFO: +++ npe-3 logfile /home/cisco/cxta/device_logs/npe-3-20230526T212443692.log +++
+
+2023-05-26 21:24:43,711: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-26 21:24:43,720: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-26 21:24:43,730: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140514960030736 +++
+
+2023-05-26 21:24:43,733: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Fri May 26 21:24:41 2023 from 10.209.205.222
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-26 21:24:44,890: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-26 21:24:44,894: %UNICON-INFO: connection to npe-3
+ssh -l cisco 17.3.11.63
+]133;C;Password: 
+Last login: Fri May 26 21:18:44 2023 from 17.3.11.163
+
+
+
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-26 21:24:45,432: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-26 21:24:45,760: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'term length 0' +++
+term length 0
+Fri May 26 21:22:40.495 UTC
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-26 21:24:46,485: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'term width 0' +++
+term width 0
+Fri May 26 21:22:41.205 UTC
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-26 21:24:47,051: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'show version' +++
+show version
+Fri May 26 21:22:41.767 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+npe-3 uptime is 1 week, 5 days, 13 hours, 52 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-26 21:25:23,851: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'show isis neighbors Gi0/0/0/0' +++
+show isis neighbors Gi0/0/0/0
+Fri May 26 21:23:18.595 UTC
+
+IS-IS ACCESS neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+upe-3          Gi0/0/0/0        *PtoP*         Up    26       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-26 21:25:24,641: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'show isis neighbors Gi0/0/0/1' +++
+show isis neighbors Gi0/0/0/1
+Fri May 26 21:23:19.442 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+npe-4          Gi0/0/0/1        *PtoP*         Up    28       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-26 21:25:25,495: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'show isis neighbors Gi0/0/0/2' +++
+show isis neighbors Gi0/0/0/2
+Fri May 26 21:23:20.238 UTC
+
+IS-IS ACCESS neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+npe-1          Gi0/0/0/2        *PtoP*         Up    22       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-26 21:25:26,389: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'show isis neighbors Gi0/0/0/3' +++
+show isis neighbors Gi0/0/0/3
+Fri May 26 21:23:21.140 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+pe-3           Gi0/0/0/3        *PtoP*         Up    25       L2   Capable 
+
+Total neighbor count: 1
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-26 21:25:54,721: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'show bgp ipv4 unicast summary' +++
+show bgp ipv4 unicast summary
+Fri May 26 21:23:49.466 UTC
+BGP router identifier 1.1.1.63, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 31
+BGP table nexthop route policy: 
+BGP main routing table version 31
+BGP NSR Initial initsync version 25 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker              31         31         31         31          31           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.53          0 21183   18116   18136       31    0    0     1w5d          0
+1.1.1.54          0 21183   18115   18135       31    0    0     1w5d          0
+1.1.1.87          0 21183   18151   18157       31    0    0     1w5d         13
+
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-26 21:25:55,579: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'show bgp ipv4 unicast summary' +++
+show bgp ipv4 unicast summary
+Fri May 26 21:23:50.375 UTC
+BGP router identifier 1.1.1.63, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 31
+BGP table nexthop route policy: 
+BGP main routing table version 31
+BGP NSR Initial initsync version 25 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker              31         31         31         31          31           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.53          0 21183   18116   18136       31    0    0     1w5d          0
+1.1.1.54          0 21183   18115   18135       31    0    0     1w5d          0
+1.1.1.87          0 21183   18151   18157       31    0    0     1w5d         13
+
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-26 21:26:08,260: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'show bgp vpnv4 unicast summary' +++
+show bgp vpnv4 unicast summary
+Fri May 26 21:24:02.992 UTC
+BGP router identifier 1.1.1.63, local AS number 21183
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0x0
+BGP table nexthop route policy: 
+BGP main routing table version 1
+BGP NSR Initial initsync version 1 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker               1          1          1          1           1           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+1.1.1.53          0 21183   18116   18136        0    0    0     1w5d  (NoNeg)
+1.1.1.54          0 21183   18115   18135        0    0    0     1w5d  (NoNeg)
+1.1.1.87          0 21183   18151   18157        0    0    0     1w5d  (NoNeg)
+
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-26 21:26:25,139: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'show segment-routing traffic-eng pcc ipv4 peer brief' +++
+show segment-routing traffic-eng pcc ipv4 peer brief
+Fri May 26 21:24:19.893 UTC
+
+             Address   Precedence        State    Learned From
+-------------------- ------------ ------------ ---------------
+           1.1.1.167          255           up          config
+
+RP/0/RP0/CPU0:npe-3#

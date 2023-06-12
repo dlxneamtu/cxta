@@ -1,0 +1,13 @@
+01 - Devices are reachable over SSH
+02 - BGP Neighborships
+03 - PCEP Neighborships
+04 - TE Policies present in SR-PCE
+05 - ISIS neighborhips 
+06 - L2VPN Health
+07 - L3VPN Health
+08 - NSO devices presence
+09 - NSO devices and services in sync
+10 - CNC K8 Nodes and Containers Health
+
+
+

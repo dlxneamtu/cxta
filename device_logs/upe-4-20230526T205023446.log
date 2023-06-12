@@ -1,0 +1,68 @@
+
+2023-05-26 20:50:23,466: %UNICON-INFO: +++ upe-4 logfile /home/cisco/cxta/device_logs/upe-4-20230526T205023446.log +++
+
+2023-05-26 20:50:23,467: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-26 20:50:23,471: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-26 20:50:23,480: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140374589950368 +++
+
+2023-05-26 20:50:23,482: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Fri May 26 20:50:21 2023 from 10.209.205.222
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-26 20:50:24,615: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-26 20:50:24,621: %UNICON-INFO: connection to upe-4
+ssh -l cisco 17.3.11.54
+]133;C;Password: 
+Last login: Fri May 26 20:45:15 2023 from 17.3.11.162
+
+
+
+RP/0/RP0/CPU0:upe-4#
+
+2023-05-26 20:50:25,171: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-26 20:50:25,498: %UNICON-INFO: +++ upe-4 with via 'cli': executing command 'term length 0' +++
+term length 0
+Fri May 26 20:48:20.222 UTC
+RP/0/RP0/CPU0:upe-4#
+
+2023-05-26 20:50:26,173: %UNICON-INFO: +++ upe-4 with via 'cli': executing command 'term width 0' +++
+term width 0
+Fri May 26 20:48:20.827 UTC
+RP/0/RP0/CPU0:upe-4#
+
+2023-05-26 20:50:26,895: %UNICON-INFO: +++ upe-4 with via 'cli': executing command 'show version' +++
+show version
+Fri May 26 20:48:21.560 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+upe-4 uptime is 1 week, 5 days, 13 hours, 18 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:upe-4#
+
+2023-05-26 20:51:04,642: %UNICON-INFO: +++ upe-4 with via 'cli': executing command 'show segment-routing traffic-eng pcc ipv4 peer brief' +++
+show segment-routing traffic-eng pcc ipv4 peer brief
+Fri May 26 20:48:59.285 UTC
+
+             Address   Precedence        State    Learned From
+-------------------- ------------ ------------ ---------------
+           1.1.1.167          255           up          config
+
+RP/0/RP0/CPU0:upe-4#

@@ -1,0 +1,91 @@
+
+2023-05-29 08:40:29,584: %UNICON-INFO: +++ nso-576 logfile /home/cisco/cxta/device_logs/nso-576-20230529T084029576.log +++
+
+2023-05-29 08:40:29,585: %UNICON-INFO: +++ Unicon plugin nso (unicon.plugins.nso) +++
+Warning: Permanently added '[10.62.157.181]:2024' (ED25519) to the list of known hosts.
+
+
+2023-05-29 08:40:30,186: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.181 -p 2024, id: 140696922222800 +++
+
+2023-05-29 08:40:30,206: %UNICON-INFO: connection to nso-576
+cloud-user@10.62.157.181's password: 
+
+User cloud-user last logged in 2023-05-29T08:37:33.135588+00:00, to nso-576, from 10.209.193.46 using cli-ssh
+cloud-user connected from 10.209.193.46 using ssh on nso-576
+[?7hcloud-user@ncs# 
+
+2023-05-29 08:40:30,995: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-29 08:40:31,205: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'screen-length 0' +++
+screen-length 0
+cloud-user@ncs# 
+
+2023-05-29 08:40:31,441: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'screen-width 0' +++
+screen-width 0
+cloud-user@ncs# 
+
+2023-05-29 08:40:31,619: %UNICON-INFO: +++ nso-576 with via 'cli': executing command 'idle-timeout 0' +++
+idle-timeout 0
+cloud-user@ncs# 
+
+2023-05-29 08:40:31,858: %UNICON-INFO: +++ nso-576 logfile /home/cisco/cxta/device_logs/nso-576-20230529T084029576.log +++
+
+2023-05-29 08:40:31,860: %UNICON-INFO: +++ Unicon plugin nso (unicon.plugins.nso) +++
+Warning: Permanently added '[10.62.157.181]:2024' (ED25519) to the list of known hosts.
+
+
+2023-05-29 08:40:32,270: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.181 -p 2024, id: 140696921889664 +++
+
+2023-05-29 08:40:32,273: %UNICON-INFO: connection to nso-576
+cloud-user@10.62.157.181's password: 
+
+User cloud-user last logged in 2023-05-29T08:38:10.366114+00:00, to nso-576, from 10.209.193.46 using cli-ssh
+cloud-user connected from 10.209.193.46 using ssh on nso-576
+[?7hcloud-user@ncs# 
+
+2023-05-29 08:40:32,956: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-29 08:40:33,029: %UNICON-INFO: +++ nso-576 with via 'cli' and alias '__cx_internal__': executing command 'screen-length 0' +++
+screen-length 0
+cloud-user@ncs# 
+
+2023-05-29 08:40:33,293: %UNICON-INFO: +++ nso-576 with via 'cli' and alias '__cx_internal__': executing command 'screen-width 0' +++
+screen-width 0
+cloud-user@ncs# 
+
+2023-05-29 08:40:33,479: %UNICON-INFO: +++ nso-576 with via 'cli' and alias '__cx_internal__': executing command 'idle-timeout 0' +++
+idle-timeout 0
+cloud-user@ncs# 
+
+2023-05-29 08:40:33,786: %UNICON-INFO: +++ nso-576 with via 'cli' and alias '__cx_internal__': cli_style +++
+switch cli
+[ok][2023-05-29 08:38:13]
+cloud-user@ncs> 
+
+2023-05-29 08:40:34,125: %UNICON-INFO: +++ nso-576 with via 'cli' and alias '__cx_internal__': configure +++
+configure
+Entering configuration mode private
+Current configuration users:
+cloud-user https (webui from 10.209.193.46) on since 2023-05-29 08:16:09 private mode
+[ok][2023-05-29 08:38:13]
+
+[edit]
+cloud-user@ncs% 
+
+2023-05-29 08:40:34,321: %UNICON-INFO: +++ nso-576 with via 'cli' and alias '__cx_internal__': command +++
+rollback 11363
+[ok][2023-05-29 08:38:14]
+
+[edit]
+cloud-user@ncs% 
+
+2023-05-29 08:40:34,779: %UNICON-INFO: +++ nso-576 with via 'cli' and alias '__cx_internal__': command +++
+commit
+Commit complete.
+[ok][2023-05-29 08:38:19]
+
+[edit]
+cloud-user@ncs% 
+exit
+[ok][2023-05-29 08:38:19]
+cloud-user@ncs> 

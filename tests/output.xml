@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.16 on linux)" generated="20230524 20:35:03.907" rpa="false" schemaversion="3">
+<suite id="s1" name="01-Xrd" source="/home/cisco/cxta/tests/01-xrd.robot">
+<kw name="load testbed &quot;testbed.yaml&quot;" library="CXTA.robot.Testbed" type="SETUP" sourcename="load testbed &quot;${testbed:[^&quot;]+}&quot;">
+<doc>Sets the current testbed to the file specified in the testbed parameter</doc>
+<msg timestamp="20230524 20:35:07.859" level="INFO">Loading testbed from file testbed.yaml</msg>
+<msg timestamp="20230524 20:35:08.035" level="INFO">+------------------------------------------------------------------------------+
+|                            Genie datafiles used:                             |
++------------------------------------------------------------------------------+</msg>
+<msg timestamp="20230524 20:35:08.035" level="INFO">Trigger datafile          | </msg>
+<msg timestamp="20230524 20:35:08.035" level="INFO">Verification  datafile    | </msg>
+<msg timestamp="20230524 20:35:08.035" level="INFO">Pts datafile              | /venv/lib/python3.9/site-packages/genie/libs/sdk/genie_yamls/pts_datafile.yaml</msg>
+<msg timestamp="20230524 20:35:08.035" level="INFO">Subsection datafile       | /venv/lib/python3.9/site-packages/genie/libs/sdk/genie_yamls/subsection_datafile.yaml</msg>
+<msg timestamp="20230524 20:35:08.035" level="INFO">Config datafile           | None</msg>
+<status status="PASS" starttime="20230524 20:35:07.855" endtime="20230524 20:35:08.058"/>
+</kw>
+<test id="s1-t1" name="Run show version" line="14">
+<kw name="run &quot;show version&quot;" library="CXTA.robot.DeviceCli" sourcename="run &quot;${command:[^&quot;]+}&quot;">
+<doc>Executes a raw CLI command on the current device set via the ``select device ...`` keywords</doc>
+<msg timestamp="20230524 20:35:08.465" level="FAIL">No device provided or selected. Please connect to and select a device!</msg>
+<status status="FAIL" starttime="20230524 20:35:08.065" endtime="20230524 20:35:08.470"/>
+</kw>
+<status status="FAIL" starttime="20230524 20:35:08.060" endtime="20230524 20:35:08.473">No device provided or selected. Please connect to and select a device!</status>
+</test>
+<meta name="CXTA Version">23.9</meta>
+<status status="FAIL" starttime="20230524 20:35:03.908" endtime="20230524 20:35:08.478"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="01-Xrd">01-Xrd</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230524 20:35:08.478" level="WARN">Please help our CX tools usage tracking efforts by setting the project ID (PID) via environment variable CUSTOMER_PID or via keyword 'callhome set customer pid to "xx"'. Please refer to https://wwwin-github.cisco.com/pages/AS-Community/CXTA/libdoc/CXTA.robot.CallHome.html for more information</msg>
+</errors>
+</robot>

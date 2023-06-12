@@ -1,0 +1,155 @@
+
+2023-05-26 21:25:06,172: %UNICON-INFO: +++ sr-pce-1 logfile /home/cisco/cxta/device_logs/sr-pce-1-20230526T212506160.log +++
+
+2023-05-26 21:25:06,175: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+Warning: Permanently added '10.62.157.167' (ECDSA) to the list of known hosts.
+
+
+2023-05-26 21:25:06,771: %UNICON-INFO: +++ connection to spawn: ssh -l admin 10.62.157.167, id: 140514957155200 +++
+
+2023-05-26 21:25:06,774: %UNICON-INFO: connection to sr-pce-1
+(admin@10.62.157.167) Password: 
+
+
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:25:07,848: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-26 21:25:08,178: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'term length 0' +++
+term length 0
+Fri May 26 21:27:17.147 UTC
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:25:08,872: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'term width 0' +++
+term width 0
+Fri May 26 21:27:17.838 UTC
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:25:09,476: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show version' +++
+show version
+Fri May 26 21:27:18.476 UTC
+Cisco IOS XR Software, Version 7.7.1
+Copyright (c) 2013-2022 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : ingunawa
+ Built On     : Mon Jul 25 02:41:45 PDT 2022
+ Built Host   : iox-ucs-067
+ Workspace    : /auto/srcarchive12/prod/7.7.1/xrv9k/ws
+ Version      : 7.7.1
+ Location     : /opt/cisco/XR/packages/
+ Label        : 7.7.1-0
+
+cisco IOS-XRv 9000 () processor
+System uptime is 15 weeks 4 days 10 hours 26 minutes
+
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:26:10,159: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show pce ipv4 peer 1.1.1.51' +++
+show pce ipv4 peer 1.1.1.51
+Fri May 26 21:28:19.163 UTC
+
+PCE's peer database: 
+--------------------
+Peer address: 1.1.1.51
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:26:11,086: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show pce ipv4 peer 1.1.1.52' +++
+show pce ipv4 peer 1.1.1.52
+Fri May 26 21:28:20.050 UTC
+
+PCE's peer database: 
+--------------------
+Peer address: 1.1.1.52
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:26:12,001: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show pce ipv4 peer 1.1.1.53' +++
+show pce ipv4 peer 1.1.1.53
+Fri May 26 21:28:20.980 UTC
+
+PCE's peer database: 
+--------------------
+Peer address: 1.1.1.53
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:26:12,777: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show pce ipv4 peer 1.1.1.54' +++
+show pce ipv4 peer 1.1.1.54
+Fri May 26 21:28:21.751 UTC
+
+PCE's peer database: 
+--------------------
+Peer address: 1.1.1.54
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:26:13,637: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show pce ipv4 peer 1.1.1.61' +++
+show pce ipv4 peer 1.1.1.61
+Fri May 26 21:28:22.597 UTC
+
+PCE's peer database: 
+--------------------
+Peer address: 1.1.1.61
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:26:14,444: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show pce ipv4 peer 1.1.1.62' +++
+show pce ipv4 peer 1.1.1.62
+Fri May 26 21:28:23.490 UTC
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:26:15,335: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show pce ipv4 peer 1.1.1.63' +++
+show pce ipv4 peer 1.1.1.63
+Fri May 26 21:28:24.292 UTC
+
+PCE's peer database: 
+--------------------
+Peer address: 1.1.1.63
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:26:16,233: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show pce ipv4 peer 1.1.1.64' +++
+show pce ipv4 peer 1.1.1.64
+Fri May 26 21:28:25.191 UTC
+
+PCE's peer database: 
+--------------------
+Peer address: 1.1.1.64
+  State: Up
+  Capabilities: Stateful, Segment-Routing, Update, Instantiation, SRv6
+
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:26:16,979: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show pce ipv4 peer 1.1.1.71' +++
+show pce ipv4 peer 1.1.1.71
+Fri May 26 21:28:25.938 UTC
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:26:17,834: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show pce ipv4 peer 1.1.1.72' +++
+show pce ipv4 peer 1.1.1.72
+Fri May 26 21:28:26.790 UTC
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:26:18,808: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show pce ipv4 peer 1.1.1.73' +++
+show pce ipv4 peer 1.1.1.73
+Fri May 26 21:28:27.762 UTC
+RP/0/RP0/CPU0:sr-pce-1#
+
+2023-05-26 21:26:19,565: %UNICON-INFO: +++ sr-pce-1 with via 'cli': executing command 'show pce ipv4 peer 1.1.1.74' +++
+show pce ipv4 peer 1.1.1.74
+Fri May 26 21:28:28.599 UTC
+RP/0/RP0/CPU0:sr-pce-1#

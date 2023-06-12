@@ -1,0 +1,23 @@
+
+2023-05-24 17:05:07,716: %UNICON-INFO: +++ staging logfile /home/cisco/cxta/device_logs/staging-20230524T170507698.log +++
+
+2023-05-24 17:05:07,718: %UNICON-INFO: +++ Unicon plugin linux (unicon.plugins.linux) +++
+
+2023-05-24 17:05:07,736: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163 -p 22, id: 140047803075216 +++
+
+2023-05-24 17:05:07,738: %UNICON-INFO: connection to staging
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Wed May 24 17:02:13 2023 from 10.209.221.184
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-24 17:05:08,716: %UNICON-INFO: Learned hostname: smi-deployer
+
+]133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B
+
+2023-05-24 17:05:08,831: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-24 17:05:10,743: %UNICON-INFO: +++ smi-deployer with via 'cli': executing command 'ls /' +++
+ls /
+]133;C;bin  boot  data  dev  etc  home  initrd.img  initrd.img.old  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var  vmlinuz  vmlinuz.old
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;B

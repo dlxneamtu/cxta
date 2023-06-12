@@ -1,0 +1,170 @@
+cloud-user@ncs# devices device *pe-* live-status exec show isis neigh
+devices device npe-1 live-status exec show
+    result
+Thu May 25 07:57:53.261 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+npe-2          Gi0/0/0/1        *PtoP*         Up    29       L2   Capable
+pe-1           Gi0/0/0/3        *PtoP*         Up    29       L2   Capable
+
+Total neighbor count: 2
+
+IS-IS ACCESS neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+npe-3          Gi0/0/0/2        *PtoP*         Up    29       L2   Capable
+upe-1          Gi0/0/0/0        *PtoP*         Up    29       L2   Capable
+
+Total neighbor count: 2
+RP/0/RP0/CPU0:npe-1#
+devices device npe-2 live-status exec show
+    result
+Thu May 25 07:57:54.391 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+pe-2           Gi0/0/0/3        *PtoP*         Up    28       L2   Capable
+npe-1          Gi0/0/0/1        *PtoP*         Up    28       L2   Capable
+
+Total neighbor count: 2
+
+IS-IS ACCESS neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+npe-4          Gi0/0/0/2        *PtoP*         Up    29       L2   Capable
+upe-2          Gi0/0/0/0        *PtoP*         Up    25       L2   Capable
+
+Total neighbor count: 2
+RP/0/RP0/CPU0:npe-2#
+devices device npe-3 live-status exec show
+    result
+Thu May 25 07:57:55.628 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+npe-4          Gi0/0/0/1        *PtoP*         Up    27       L2   Capable
+pe-3           Gi0/0/0/3        *PtoP*         Up    27       L2   Capable
+
+Total neighbor count: 2
+
+IS-IS ACCESS neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+npe-1          Gi0/0/0/2        *PtoP*         Up    29       L2   Capable
+upe-3          Gi0/0/0/0        *PtoP*         Up    22       L2   Capable
+
+Total neighbor count: 2
+RP/0/RP0/CPU0:npe-3#
+devices device npe-4 live-status exec show
+    result
+Thu May 25 07:57:56.728 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+pe-4           Gi0/0/0/3        *PtoP*         Up    26       L2   Capable
+npe-3          Gi0/0/0/1        *PtoP*         Up    26       L2   Capable
+
+Total neighbor count: 2
+
+IS-IS ACCESS neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+npe-2          Gi0/0/0/2        *PtoP*         Up    24       L2   Capable
+upe-4          Gi0/0/0/0        *PtoP*         Up    23       L2   Capable
+
+Total neighbor count: 2
+RP/0/RP0/CPU0:npe-4#
+devices device pe-1 live-status exec show
+    result
+Thu May 25 07:58:01.606 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+pe-2           Gi0/0/0/1        *PtoP*         Up    26       L2   Capable
+pe-3           Gi0/0/0/2        *PtoP*         Up    25       L2   Capable
+npe-1          Gi0/0/0/0        *PtoP*         Up    29       L2   Capable
+p-1            Gi0/0/0/3        *PtoP*         Up    26       L2   Capable
+
+Total neighbor count: 4
+RP/0/RP0/CPU0:pe-1#
+devices device pe-2 live-status exec show
+    result
+Thu May 25 07:58:02.870 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+pe-4           Gi0/0/0/2        *PtoP*         Up    24       L2   Capable
+npe-2          Gi0/0/0/0        *PtoP*         Up    26       L2   Capable
+pe-1           Gi0/0/0/1        *PtoP*         Up    24       L2   Capable
+p-1            Gi0/0/0/3        *PtoP*         Up    29       L2   Capable
+
+Total neighbor count: 4
+RP/0/RP0/CPU0:pe-2#
+devices device pe-3 live-status exec show
+    result
+Thu May 25 07:58:03.887 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+pe-4           Gi0/0/0/1        *PtoP*         Up    25       L2   Capable
+pe-1           Gi0/0/0/2        *PtoP*         Up    24       L2   Capable
+npe-3          Gi0/0/0/0        *PtoP*         Up    25       L2   Capable
+p-1            Gi0/0/0/3        *PtoP*         Up    27       L2   Capable
+
+Total neighbor count: 4
+RP/0/RP0/CPU0:pe-3#
+devices device pe-4 live-status exec show
+    result
+Thu May 25 07:58:04.964 UTC
+
+IS-IS CORE neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+pe-2           Gi0/0/0/2        *PtoP*         Up    27       L2   Capable
+npe-4          Gi0/0/0/0        *PtoP*         Up    23       L2   Capable
+pe-3           Gi0/0/0/1        *PtoP*         Up    28       L2   Capable
+p-1            Gi0/0/0/3        *PtoP*         Up    27       L2   Capable
+
+Total neighbor count: 4
+RP/0/RP0/CPU0:pe-4#
+devices device upe-1 live-status exec show
+    result
+Thu May 25 07:58:02.367 UTC
+
+IS-IS ACCESS neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+upe-2          Gi0/0/0/2        *PtoP*         Up    25       L2   Capable
+npe-1          Gi0/0/0/3        *PtoP*         Up    25       L2   Capable
+
+Total neighbor count: 2
+RP/0/RP0/CPU0:upe-1#
+devices device upe-2 live-status exec show
+    result
+Thu May 25 07:58:03.529 UTC
+
+IS-IS ACCESS neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+npe-2          Gi0/0/0/3        *PtoP*         Up    26       L2   Capable
+upe-1          Gi0/0/0/2        *PtoP*         Up    26       L2   Capable
+
+Total neighbor count: 2
+RP/0/RP0/CPU0:upe-2#
+devices device upe-3 live-status exec show
+    result
+Thu May 25 07:58:04.750 UTC
+
+IS-IS ACCESS neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+upe-4          Gi0/0/0/2        *PtoP*         Up    29       L2   Capable
+npe-3          Gi0/0/0/3        *PtoP*         Up    21       L2   Capable
+
+Total neighbor count: 2
+RP/0/RP0/CPU0:upe-3#
+devices device upe-4 live-status exec show
+    result
+Thu May 25 07:58:05.871 UTC
+
+IS-IS ACCESS neighbors:
+System Id      Interface        SNPA           State Holdtime Type IETF-NSF
+npe-4          Gi0/0/0/3        *PtoP*         Up    28       L2   Capable
+upe-3          Gi0/0/0/2        *PtoP*         Up    29       L2   Capable
+
+Total neighbor count: 2
+RP/0/RP0/CPU0:upe-4#
+cloud-user@ncs#

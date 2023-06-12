@@ -1,0 +1,58 @@
+
+2023-05-25 14:09:53,633: %UNICON-INFO: +++ npe-3 logfile /home/cisco/cxta/device_logs/npe-3-20230525T140953621.log +++
+
+2023-05-25 14:09:53,636: %UNICON-INFO: +++ Unicon plugin generic (unicon.plugins.generic) +++
+
+2023-05-25 14:09:53,644: %UNICON-INFO: connection via proxy jumphost
+
+2023-05-25 14:09:53,654: %UNICON-INFO: +++ connection to spawn: ssh -l cloud-user 10.62.157.163, id: 140570597656224 +++
+
+2023-05-25 14:09:53,657: %UNICON-INFO: connection to jumphost
+Warning: Permanently added '10.62.157.163' (ECDSA) to the list of known hosts.
+cloud-user@10.62.157.163's password: 
+Last login: Thu May 25 14:09:51 2023 from 10.209.205.222
+]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]1337;ShellIntegrationVersion=16;shell=bash]
+
+2023-05-25 14:09:54,714: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-25 14:09:54,717: %UNICON-INFO: connection to npe-3
+133;C;]1337;RemoteHost=cloud-user@smi-deployer]1337;CurrentDir=/home/cloud-user]133;D;0]133;Acloud-user@smi-deployer:~$ ]133;Bssh -l cisco 17.3.11.63
+]133;C;Password: 
+Last login: Thu May 25 14:05:52 2023 from 17.3.11.163
+
+
+
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-25 14:09:55,221: %UNICON-INFO: +++ initializing handle +++
+
+2023-05-25 14:09:55,562: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'term length 0' +++
+term length 0
+Thu May 25 14:07:52.633 UTC
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-25 14:09:56,146: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'term width 0' +++
+term width 0
+Thu May 25 14:07:53.227 UTC
+RP/0/RP0/CPU0:npe-3#
+
+2023-05-25 14:09:56,750: %UNICON-INFO: +++ npe-3 with via 'cli': executing command 'show version' +++
+show version
+Thu May 25 14:07:53.829 UTC
+Cisco IOS XR Software, Version 7.11.1.12I LNT
+Copyright (c) 2013-2023 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : gopalk2
+ Built On     : Thu May 11 10:52:21 UTC 2023
+ Build Host   : iox-lnx-064
+ Workspace    : /auto/iox-lnx-064-san1/nightly_xr-dev/230511A_xrd-control-pla/ws/
+ Version      : 7.11.1.12I
+ Label        : 7.11.1.12I
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 120GB of memory
+npe-3 uptime is 1 week, 4 days, 6 hours, 37 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:npe-3#
