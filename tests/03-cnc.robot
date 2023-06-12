@@ -206,6 +206,6 @@ verify links details accuracy
         Run Keyword And Continue On Failure   Should Be Equal As Strings    ${returned_topo_links}[${returned_link}][igp_metric]    ${expected_topo_links}[${returned_link}][igp_metric]
         Run Keyword And Continue On Failure   Should Be Equal As Strings    ${returned_topo_links}[${returned_link}][te_metric]    ${expected_topo_links}[${returned_link}][te_metric]    
     END
-
+#test
 delete session
     Delete All Sessions
